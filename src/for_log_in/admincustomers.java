@@ -73,7 +73,7 @@ public class admincustomers extends javax.swing.JFrame {
         jLabel1.setBounds(10, 20, 100, 40);
 
         archivebutton.setBackground(new java.awt.Color(255, 255, 255));
-        archivebutton.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
+        archivebutton.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
         archivebutton.setText("Archive");
         archivebutton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -86,10 +86,10 @@ public class admincustomers extends javax.swing.JFrame {
             }
         });
         jPanel1.add(archivebutton);
-        archivebutton.setBounds(570, 30, 70, 30);
+        archivebutton.setBounds(880, 30, 100, 30);
 
         customers.setBackground(new java.awt.Color(255, 255, 255));
-        customers.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
+        customers.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
         customers.setText("Add");
         customers.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -102,7 +102,7 @@ public class admincustomers extends javax.swing.JFrame {
             }
         });
         jPanel1.add(customers);
-        customers.setBounds(490, 30, 70, 30);
+        customers.setBounds(780, 30, 90, 30);
 
         jLabel19.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -130,20 +130,20 @@ public class admincustomers extends javax.swing.JFrame {
         jScrollPane1.setViewportView(customersTable);
 
         jPanel3.add(jScrollPane1);
-        jScrollPane1.setBounds(10, 10, 610, 480);
+        jScrollPane1.setBounds(10, 10, 950, 610);
 
         jPanel1.add(jPanel3);
-        jPanel3.setBounds(10, 60, 630, 500);
+        jPanel3.setBounds(10, 60, 970, 630);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 656, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 990, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 701, Short.MAX_VALUE)
         );
 
         pack();

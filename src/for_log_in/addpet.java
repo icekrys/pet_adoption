@@ -106,14 +106,11 @@ public class addpet extends javax.swing.JFrame {
         jComboBox6 = new javax.swing.JComboBox<>();
         jComboBox7 = new javax.swing.JComboBox<>();
         jPanel3 = new javax.swing.JPanel();
-        sex = new javax.swing.JComboBox<>();
-        e_mail5 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         image2 = new javax.swing.JLabel();
         select = new javax.swing.JButton();
         remove = new javax.swing.JButton();
-        s_petlabel = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
         petbd1 = new javax.swing.JTextField();
         first_name3 = new javax.swing.JLabel();
@@ -121,6 +118,9 @@ public class addpet extends javax.swing.JFrame {
         petage = new javax.swing.JTextField();
         first_name2 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
+        s_petlabel = new javax.swing.JButton();
+        sex = new javax.swing.JComboBox<>();
+        e_mail5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -136,30 +136,31 @@ public class addpet extends javax.swing.JFrame {
                 petnmActionPerformed(evt);
             }
         });
-        jPanel5.add(petnm, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 210, 30));
+        jPanel5.add(petnm, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 460, 30));
 
         first_name1.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
-        first_name1.setForeground(new java.awt.Color(153, 153, 153));
         first_name1.setText("Name:");
         jPanel5.add(first_name1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 100, -1));
 
         jPanel1.add(jPanel5);
-        jPanel5.setBounds(30, 80, 270, 90);
+        jPanel5.setBounds(30, 80, 530, 90);
 
         e_mail4.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
-        e_mail4.setForeground(new java.awt.Color(153, 153, 153));
         e_mail4.setText("Date of Birth:");
         jPanel1.add(e_mail4);
-        e_mail4.setBounds(30, 460, 110, 20);
+        e_mail4.setBounds(30, 500, 110, 20);
 
+        jComboBox5.setFont(new java.awt.Font("Candara", 0, 18)); // NOI18N
         jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
         jPanel1.add(jComboBox5);
-        jComboBox5.setBounds(30, 490, 50, 20);
+        jComboBox5.setBounds(30, 530, 50, 20);
 
+        jComboBox6.setFont(new java.awt.Font("Candara", 0, 18)); // NOI18N
         jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "January", "February", "March", "April", "May ", "June", "July", "August", "September", "October", "November", "December" }));
         jPanel1.add(jComboBox6);
-        jComboBox6.setBounds(100, 490, 107, 20);
+        jComboBox6.setBounds(100, 530, 116, 20);
 
+        jComboBox7.setFont(new java.awt.Font("Candara", 0, 18)); // NOI18N
         jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2024", "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", " " }));
         jComboBox7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -167,19 +168,11 @@ public class addpet extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jComboBox7);
-        jComboBox7.setBounds(230, 490, 67, 20);
+        jComboBox7.setBounds(230, 530, 71, 20);
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        sex.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female" }));
-        jPanel3.add(sex, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 70, -1));
-
-        e_mail5.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
-        e_mail5.setForeground(new java.awt.Color(153, 153, 153));
-        e_mail5.setText("Gender:");
-        jPanel3.add(e_mail5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 20));
 
         jPanel9.setBackground(new java.awt.Color(255, 255, 255));
         jPanel9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
@@ -188,12 +181,12 @@ public class addpet extends javax.swing.JFrame {
         jPanel10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
         jPanel10.setLayout(null);
         jPanel10.add(image2);
-        image2.setBounds(0, 0, 200, 320);
+        image2.setBounds(0, 0, 310, 440);
 
         jPanel9.add(jPanel10);
-        jPanel10.setBounds(10, 10, 200, 320);
+        jPanel10.setBounds(10, 10, 310, 440);
 
-        jPanel3.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 220, 340));
+        jPanel3.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 330, 460));
 
         select.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
         select.setText("SELECT");
@@ -207,7 +200,7 @@ public class addpet extends javax.swing.JFrame {
                 selectActionPerformed(evt);
             }
         });
-        jPanel3.add(select, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 360, -1, -1));
+        jPanel3.add(select, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 510, -1, 20));
 
         remove.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
         remove.setText("REMOVE");
@@ -216,19 +209,10 @@ public class addpet extends javax.swing.JFrame {
                 removeActionPerformed(evt);
             }
         });
-        jPanel3.add(remove, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 360, -1, -1));
-
-        s_petlabel.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
-        s_petlabel.setText(" Save");
-        s_petlabel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                s_petlabelActionPerformed(evt);
-            }
-        });
-        jPanel3.add(s_petlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 70, 20));
+        jPanel3.add(remove, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 510, -1, 20));
 
         jPanel1.add(jPanel3);
-        jPanel3.setBounds(320, 30, 320, 530);
+        jPanel3.setBounds(600, 50, 370, 550);
 
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
         jPanel7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
@@ -239,15 +223,14 @@ public class addpet extends javax.swing.JFrame {
                 petbd1ActionPerformed(evt);
             }
         });
-        jPanel7.add(petbd1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 210, 30));
+        jPanel7.add(petbd1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 460, 30));
 
         first_name3.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
-        first_name3.setForeground(new java.awt.Color(153, 153, 153));
         first_name3.setText("Breed:");
         jPanel7.add(first_name3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 100, -1));
 
         jPanel1.add(jPanel7);
-        jPanel7.setBounds(30, 340, 270, 90);
+        jPanel7.setBounds(30, 340, 530, 90);
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
@@ -258,15 +241,14 @@ public class addpet extends javax.swing.JFrame {
                 petageActionPerformed(evt);
             }
         });
-        jPanel6.add(petage, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 210, 30));
+        jPanel6.add(petage, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 460, 30));
 
         first_name2.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
-        first_name2.setForeground(new java.awt.Color(153, 153, 153));
         first_name2.setText("Age:");
         jPanel6.add(first_name2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 100, -1));
 
         jPanel1.add(jPanel6);
-        jPanel6.setBounds(30, 210, 270, 90);
+        jPanel6.setBounds(30, 210, 530, 90);
 
         jLabel19.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -279,15 +261,35 @@ public class addpet extends javax.swing.JFrame {
         jPanel1.add(jLabel19);
         jLabel19.setBounds(0, 0, 20, 20);
 
+        s_petlabel.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
+        s_petlabel.setText(" Save");
+        s_petlabel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                s_petlabelActionPerformed(evt);
+            }
+        });
+        jPanel1.add(s_petlabel);
+        s_petlabel.setBounds(910, 670, 70, 20);
+
+        sex.setFont(new java.awt.Font("Candara", 0, 18)); // NOI18N
+        sex.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female" }));
+        jPanel1.add(sex);
+        sex.setBounds(340, 530, 70, 28);
+
+        e_mail5.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
+        e_mail5.setText("Gender:");
+        jPanel1.add(e_mail5);
+        e_mail5.setBounds(340, 510, 60, 20);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 656, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 990, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 701, Short.MAX_VALUE)
         );
 
         pack();

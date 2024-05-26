@@ -72,6 +72,16 @@ public class re_gister extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel38 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -110,6 +120,47 @@ public class re_gister extends javax.swing.JFrame {
         jLabel26 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        jLabel49 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        jLabel58 = new javax.swing.JLabel();
+        jLabel59 = new javax.swing.JLabel();
+
+        jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-70.png"))); // NOI18N
+
+        jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-70.png"))); // NOI18N
+
+        jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
+
+        jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-50.png"))); // NOI18N
+
+        jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-50.png"))); // NOI18N
+
+        jLabel44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-50.png"))); // NOI18N
+
+        jLabel45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-50.png"))); // NOI18N
+
+        jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
+
+        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
+
+        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -118,7 +169,7 @@ public class re_gister extends javax.swing.JFrame {
         jPanel2.setForeground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Candara", 1, 20)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(118, 199, 234));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Return to Login");
@@ -128,7 +179,7 @@ public class re_gister extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jLabel1);
-        jLabel1.setBounds(550, 0, 100, 30);
+        jLabel1.setBounds(830, 0, 160, 30);
 
         jLabel7.setFont(new java.awt.Font("Pristina", 1, 90)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 208, 144));
@@ -151,7 +202,7 @@ public class re_gister extends javax.swing.JFrame {
             }
         });
         jPanel1.add(fn);
-        fn.setBounds(40, 70, 210, 30);
+        fn.setBounds(40, 70, 380, 40);
 
         first_name.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
         first_name.setForeground(new java.awt.Color(153, 153, 153));
@@ -163,7 +214,7 @@ public class re_gister extends javax.swing.JFrame {
         user_name.setForeground(new java.awt.Color(153, 153, 153));
         user_name.setText("Username:");
         jPanel1.add(user_name);
-        user_name.setBounds(40, 140, 90, 20);
+        user_name.setBounds(40, 160, 90, 20);
 
         us.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,13 +222,13 @@ public class re_gister extends javax.swing.JFrame {
             }
         });
         jPanel1.add(us);
-        us.setBounds(40, 160, 210, 30);
+        us.setBounds(40, 180, 380, 40);
 
         last_name.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
         last_name.setForeground(new java.awt.Color(153, 153, 153));
         last_name.setText("Last Name:");
         jPanel1.add(last_name);
-        last_name.setBounds(40, 230, 80, 20);
+        last_name.setBounds(40, 270, 80, 20);
 
         ln.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -185,7 +236,7 @@ public class re_gister extends javax.swing.JFrame {
             }
         });
         jPanel1.add(ln);
-        ln.setBounds(40, 250, 210, 30);
+        ln.setBounds(40, 290, 380, 40);
 
         em.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -193,19 +244,19 @@ public class re_gister extends javax.swing.JFrame {
             }
         });
         jPanel1.add(em);
-        em.setBounds(310, 70, 210, 30);
+        em.setBounds(450, 70, 390, 40);
 
         e_mail.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
         e_mail.setForeground(new java.awt.Color(153, 153, 153));
         e_mail.setText("Email:");
         jPanel1.add(e_mail);
-        e_mail.setBounds(310, 50, 60, 20);
+        e_mail.setBounds(450, 50, 70, 20);
 
         contact_number.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
         contact_number.setForeground(new java.awt.Color(153, 153, 153));
         contact_number.setText("Contact Number:");
         jPanel1.add(contact_number);
-        contact_number.setBounds(320, 140, 110, 20);
+        contact_number.setBounds(460, 160, 120, 20);
 
         cn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -213,13 +264,13 @@ public class re_gister extends javax.swing.JFrame {
             }
         });
         jPanel1.add(cn);
-        cn.setBounds(310, 160, 210, 30);
+        cn.setBounds(450, 180, 390, 40);
 
         pass_word.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
         pass_word.setForeground(new java.awt.Color(153, 153, 153));
         pass_word.setText("Password:");
         jPanel1.add(pass_word);
-        pass_word.setBounds(310, 230, 80, 20);
+        pass_word.setBounds(450, 270, 90, 20);
 
         pss.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -227,7 +278,7 @@ public class re_gister extends javax.swing.JFrame {
             }
         });
         jPanel1.add(pss);
-        pss.setBounds(310, 250, 210, 30);
+        pss.setBounds(450, 290, 390, 40);
 
         registerbutton.setBackground(new java.awt.Color(244, 229, 204));
         registerbutton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
@@ -238,14 +289,14 @@ public class re_gister extends javax.swing.JFrame {
         });
         registerbutton.setLayout(null);
 
-        jLabel2.setFont(new java.awt.Font("Candara", 0, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Candara", 0, 20)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Register");
         registerbutton.add(jLabel2);
         jLabel2.setBounds(40, 0, 130, 30);
 
         jPanel1.add(registerbutton);
-        registerbutton.setBounds(310, 320, 210, 30);
+        registerbutton.setBounds(640, 380, 210, 30);
 
         up.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "User" }));
         up.addActionListener(new java.awt.event.ActionListener() {
@@ -254,17 +305,17 @@ public class re_gister extends javax.swing.JFrame {
             }
         });
         jPanel1.add(up);
-        up.setBounds(110, 330, 80, 20);
+        up.setBounds(110, 390, 80, 20);
 
         type.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
         type.setForeground(new java.awt.Color(153, 153, 153));
         type.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         type.setText("User Type");
         jPanel1.add(type);
-        type.setBounds(40, 320, 70, 40);
+        type.setBounds(40, 380, 70, 40);
 
         jPanel2.add(jPanel1);
-        jPanel1.setBounds(50, 130, 560, 400);
+        jPanel1.setBounds(50, 130, 890, 500);
 
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
         jPanel2.add(jLabel23);
@@ -284,11 +335,11 @@ public class re_gister extends javax.swing.JFrame {
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-70.png"))); // NOI18N
         jPanel2.add(jLabel11);
-        jLabel11.setBounds(590, 400, 70, 80);
+        jLabel11.setBounds(200, 580, 70, 80);
 
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
         jPanel2.add(jLabel20);
-        jLabel20.setBounds(610, 310, 24, 30);
+        jLabel20.setBounds(330, 630, 24, 30);
 
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-50.png"))); // NOI18N
         jPanel2.add(jLabel21);
@@ -296,7 +347,7 @@ public class re_gister extends javax.swing.JFrame {
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
         jPanel2.add(jLabel12);
-        jLabel12.setBounds(630, 520, 24, 30);
+        jLabel12.setBounds(890, 90, 24, 30);
 
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-50.png"))); // NOI18N
         jPanel2.add(jLabel15);
@@ -324,7 +375,7 @@ public class re_gister extends javax.swing.JFrame {
 
         jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-50.png"))); // NOI18N
         jPanel2.add(jLabel26);
-        jLabel26.setBounds(610, 200, 50, 60);
+        jLabel26.setBounds(100, 630, 50, 60);
 
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-70.png"))); // NOI18N
         jPanel2.add(jLabel19);
@@ -334,15 +385,99 @@ public class re_gister extends javax.swing.JFrame {
         jPanel2.add(jLabel27);
         jLabel27.setBounds(10, 210, 24, 30);
 
+        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
+        jPanel2.add(jLabel28);
+        jLabel28.setBounds(940, 650, 24, 30);
+
+        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-70.png"))); // NOI18N
+        jPanel2.add(jLabel29);
+        jLabel29.setBounds(900, 530, 70, 80);
+
+        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-50.png"))); // NOI18N
+        jPanel2.add(jLabel31);
+        jLabel31.setBounds(810, 130, 50, 60);
+
+        jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-50.png"))); // NOI18N
+        jPanel2.add(jLabel32);
+        jLabel32.setBounds(840, 620, 50, 60);
+
+        jLabel33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
+        jPanel2.add(jLabel33);
+        jLabel33.setBounds(750, 650, 24, 30);
+
+        jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-70.png"))); // NOI18N
+        jPanel2.add(jLabel34);
+        jLabel34.setBounds(760, 260, 70, 90);
+
+        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-50.png"))); // NOI18N
+        jPanel2.add(jLabel35);
+        jLabel35.setBounds(450, 630, 50, 60);
+
+        jLabel36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-50.png"))); // NOI18N
+        jPanel2.add(jLabel36);
+        jLabel36.setBounds(630, 70, 50, 60);
+
+        jLabel46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
+        jPanel2.add(jLabel46);
+        jLabel46.setBounds(60, 580, 24, 30);
+
+        jLabel47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
+        jPanel2.add(jLabel47);
+        jLabel47.setBounds(10, 660, 24, 30);
+
+        jLabel49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-50.png"))); // NOI18N
+        jPanel2.add(jLabel49);
+        jLabel49.setBounds(700, 160, 50, 60);
+
+        jLabel50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-50.png"))); // NOI18N
+        jPanel2.add(jLabel50);
+        jLabel50.setBounds(830, 20, 50, 60);
+
+        jLabel51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-70.png"))); // NOI18N
+        jPanel2.add(jLabel51);
+        jLabel51.setBounds(590, 610, 70, 80);
+
+        jLabel52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-70.png"))); // NOI18N
+        jPanel2.add(jLabel52);
+        jLabel52.setBounds(700, -20, 70, 80);
+
+        jLabel53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
+        jPanel2.add(jLabel53);
+        jLabel53.setBounds(920, 440, 24, 30);
+
+        jLabel54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-50.png"))); // NOI18N
+        jPanel2.add(jLabel54);
+        jLabel54.setBounds(920, 330, 50, 60);
+
+        jLabel55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-70.png"))); // NOI18N
+        jPanel2.add(jLabel55);
+        jLabel55.setBounds(930, 130, 70, 80);
+
+        jLabel56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
+        jPanel2.add(jLabel56);
+        jLabel56.setBounds(970, 270, 24, 30);
+
+        jLabel57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
+        jPanel2.add(jLabel57);
+        jLabel57.setBounds(870, 240, 24, 30);
+
+        jLabel58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
+        jPanel2.add(jLabel58);
+        jLabel58.setBounds(780, 80, 24, 30);
+
+        jLabel59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-70.png"))); // NOI18N
+        jPanel2.add(jLabel59);
+        jLabel59.setBounds(950, 20, 70, 80);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 655, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 990, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 701, Short.MAX_VALUE)
         );
 
         pack();
@@ -488,6 +623,37 @@ try {
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel49;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;

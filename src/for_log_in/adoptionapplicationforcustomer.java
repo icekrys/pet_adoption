@@ -38,20 +38,23 @@ public class adoptionapplicationforcustomer extends javax.swing.JFrame {
 
         customerpanel = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        nm = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        ag = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        con = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        add = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        ema = new javax.swing.JTextField();
         gen = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
         c_label = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        ema = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        ag = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        nm = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        con = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        add = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -63,76 +66,17 @@ public class adoptionapplicationforcustomer extends javax.swing.JFrame {
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
         jPanel1.setLayout(null);
 
-        jLabel3.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel3.setText("Name");
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(30, 20, 50, 20);
-        jPanel1.add(nm);
-        nm.setBounds(30, 40, 150, 40);
-
-        jLabel4.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel4.setText("Age");
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(30, 120, 50, 20);
-
-        ag.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                agActionPerformed(evt);
-            }
-        });
-        jPanel1.add(ag);
-        ag.setBounds(30, 140, 150, 40);
-
-        jLabel5.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel5.setText("Contact");
-        jPanel1.add(jLabel5);
-        jLabel5.setBounds(30, 220, 50, 20);
-
-        con.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                conActionPerformed(evt);
-            }
-        });
-        jPanel1.add(con);
-        con.setBounds(30, 240, 150, 40);
-
-        jLabel6.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel6.setText("Address");
-        jPanel1.add(jLabel6);
-        jLabel6.setBounds(30, 320, 50, 20);
-        jPanel1.add(add);
-        add.setBounds(30, 340, 150, 40);
-
-        jLabel2.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel2.setText("Email");
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(30, 430, 50, 20);
-
-        ema.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emaActionPerformed(evt);
-            }
-        });
-        jPanel1.add(ema);
-        ema.setBounds(30, 450, 150, 40);
-
         gen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Female", "Male" }));
         jPanel1.add(gen);
-        gen.setBounds(240, 50, 80, 26);
+        gen.setBounds(460, 60, 80, 26);
 
-        jLabel7.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel7.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
         jLabel7.setText("Gender");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(240, 30, 50, 20);
+        jLabel7.setBounds(460, 40, 50, 20);
 
         c_label.setBackground(new java.awt.Color(255, 255, 255));
-        c_label.setFont(new java.awt.Font("Rockwell", 0, 12)); // NOI18N
+        c_label.setFont(new java.awt.Font("Rockwell", 1, 14)); // NOI18N
         c_label.setText("Add");
         c_label.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -140,15 +84,89 @@ public class adoptionapplicationforcustomer extends javax.swing.JFrame {
             }
         });
         jPanel1.add(c_label);
-        c_label.setBounds(250, 470, 80, 20);
-
-        customerpanel.add(jPanel1);
-        jPanel1.setBounds(20, 40, 370, 520);
+        c_label.setBounds(790, 570, 80, 20);
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/25-wall.jpg"))); // NOI18N
         jLabel8.setText("jLabel1");
-        customerpanel.add(jLabel8);
-        jLabel8.setBounds(170, 30, 550, 340);
+        jPanel1.add(jLabel8);
+        jLabel8.setBounds(440, -20, 500, 340);
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
+        jPanel2.setLayout(null);
+
+        ema.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emaActionPerformed(evt);
+            }
+        });
+        jPanel2.add(ema);
+        ema.setBounds(30, 50, 350, 50);
+
+        jLabel2.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
+        jLabel2.setText("Email");
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(30, 30, 50, 20);
+
+        jPanel1.add(jPanel2);
+        jPanel2.setBounds(460, 390, 410, 150);
+
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
+        jPanel3.setLayout(null);
+
+        ag.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                agActionPerformed(evt);
+            }
+        });
+        jPanel3.add(ag);
+        ag.setBounds(20, 140, 370, 50);
+
+        jLabel9.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
+        jLabel9.setText("Age");
+        jPanel3.add(jLabel9);
+        jLabel9.setBounds(20, 120, 100, 20);
+        jPanel3.add(nm);
+        nm.setBounds(20, 40, 370, 50);
+
+        jLabel10.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
+        jLabel10.setText("Name");
+        jPanel3.add(jLabel10);
+        jLabel10.setBounds(20, 20, 100, 20);
+
+        jPanel1.add(jPanel3);
+        jPanel3.setBounds(20, 50, 410, 230);
+
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
+        jPanel4.setLayout(null);
+
+        con.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                conActionPerformed(evt);
+            }
+        });
+        jPanel4.add(con);
+        con.setBounds(30, 40, 360, 50);
+
+        jLabel11.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
+        jLabel11.setText("Contact");
+        jPanel4.add(jLabel11);
+        jLabel11.setBounds(30, 20, 50, 20);
+        jPanel4.add(add);
+        add.setBounds(30, 150, 360, 50);
+
+        jLabel12.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
+        jLabel12.setText("Address");
+        jPanel4.add(jLabel12);
+        jLabel12.setBounds(30, 130, 50, 20);
+
+        jPanel1.add(jPanel4);
+        jPanel4.setBounds(20, 310, 410, 230);
+
+        customerpanel.add(jPanel1);
+        jPanel1.setBounds(20, 40, 940, 640);
 
         jLabel19.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -165,20 +183,16 @@ public class adoptionapplicationforcustomer extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(customerpanel, javax.swing.GroupLayout.DEFAULT_SIZE, 655, Short.MAX_VALUE)
+            .addComponent(customerpanel, javax.swing.GroupLayout.DEFAULT_SIZE, 990, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(customerpanel, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
+            .addComponent(customerpanel, javax.swing.GroupLayout.DEFAULT_SIZE, 701, Short.MAX_VALUE)
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void conActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_conActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_conActionPerformed
 
     private void emaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emaActionPerformed
         // TODO add your handling code here:
@@ -211,15 +225,19 @@ public class adoptionapplicationforcustomer extends javax.swing.JFrame {
 
     }//GEN-LAST:event_c_labelActionPerformed
 
-    private void agActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_agActionPerformed
-
     private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
         admincustomers up = new admincustomers();
         up.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel19MouseClicked
+
+    private void agActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_agActionPerformed
+
+    private void conActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_conActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_conActionPerformed
 
     /**
      * @param args the command line arguments
@@ -267,15 +285,18 @@ public class adoptionapplicationforcustomer extends javax.swing.JFrame {
     private javax.swing.JPanel customerpanel;
     private javax.swing.JTextField ema;
     private javax.swing.JComboBox<String> gen;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JTextField nm;
     // End of variables declaration//GEN-END:variables
 }

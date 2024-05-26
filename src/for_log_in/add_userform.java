@@ -171,6 +171,7 @@ public class add_userform extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -180,7 +181,7 @@ public class add_userform extends javax.swing.JFrame {
         jPanel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        st_label.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        st_label.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         st_label.setText("Save");
         st_label.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -195,71 +196,71 @@ public class add_userform extends javax.swing.JFrame {
                 st_labelActionPerformed(evt);
             }
         });
-        jPanel4.add(st_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 380, 90, 30));
+        jPanel4.add(st_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 560, 90, 30));
 
         jLabel7.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(153, 153, 153));
         jLabel7.setText("Password:");
-        jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, 80, 20));
+        jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, 80, 20));
 
         us.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 usActionPerformed(evt);
             }
         });
-        jPanel4.add(us, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 70, 130, 30));
+        jPanel4.add(us, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, 250, 40));
 
         jLabel8.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(153, 153, 153));
         jLabel8.setText("Username:");
-        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 50, 80, 20));
-        jPanel4.add(ln, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, 120, 30));
+        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 170, 80, 20));
+        jPanel4.add(ln, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 440, 250, 40));
 
         jLabel9.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(153, 153, 153));
         jLabel9.setText("Last Name:");
-        jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, 70, 30));
+        jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 410, 70, 30));
 
         jLabel11.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(153, 153, 153));
         jLabel11.setText("Email:");
-        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, 40, 20));
+        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 50, 40, 20));
 
         em.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 emActionPerformed(evt);
             }
         });
-        jPanel4.add(em, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 180, 120, 30));
+        jPanel4.add(em, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 70, 250, 40));
 
         cn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cnActionPerformed(evt);
             }
         });
-        jPanel4.add(cn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 130, 30));
+        jPanel4.add(cn, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 250, 40));
 
         jLabel14.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(153, 153, 153));
         jLabel14.setText("Contact Number:");
-        jPanel4.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 110, 20));
+        jPanel4.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, 110, 20));
 
         fn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fnActionPerformed(evt);
             }
         });
-        jPanel4.add(fn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 130, 30));
+        jPanel4.add(fn, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 250, 40));
 
         jLabel15.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(153, 153, 153));
         jLabel15.setText("First Name:");
-        jPanel4.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 90, 20));
+        jPanel4.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, 90, 20));
 
         type.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
         type.setForeground(new java.awt.Color(153, 153, 153));
         type.setText("Account Type");
-        jPanel4.add(type, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, 90, -1));
+        jPanel4.add(type, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 400, 90, -1));
 
         up.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "User" }));
         up.addActionListener(new java.awt.event.ActionListener() {
@@ -267,12 +268,12 @@ public class add_userform extends javax.swing.JFrame {
                 upActionPerformed(evt);
             }
         });
-        jPanel4.add(up, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 280, 80, -1));
+        jPanel4.add(up, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 420, 80, -1));
 
         type1.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
         type1.setForeground(new java.awt.Color(153, 153, 153));
         type1.setText("Account Status");
-        jPanel4.add(type1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 260, 100, -1));
+        jPanel4.add(type1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 480, 100, -1));
 
         usta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Active", "Pending" }));
         usta.addActionListener(new java.awt.event.ActionListener() {
@@ -280,8 +281,8 @@ public class add_userform extends javax.swing.JFrame {
                 ustaActionPerformed(evt);
             }
         });
-        jPanel4.add(usta, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 280, 90, -1));
-        jPanel4.add(pss, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 180, 130, 30));
+        jPanel4.add(usta, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 500, 90, -1));
+        jPanel4.add(pss, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 310, 250, 40));
 
         id.setEditable(false);
         id.addActionListener(new java.awt.event.ActionListener() {
@@ -289,15 +290,15 @@ public class add_userform extends javax.swing.JFrame {
                 idActionPerformed(evt);
             }
         });
-        jPanel4.add(id, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 130, 30));
+        jPanel4.add(id, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 250, 40));
 
         jLabel16.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(153, 153, 153));
         jLabel16.setText("User ID:");
-        jPanel4.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 90, 20));
+        jPanel4.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, 90, 20));
 
         jPanel2.add(jPanel4);
-        jPanel4.setBounds(200, 50, 440, 460);
+        jPanel4.setBounds(200, 50, 750, 610);
 
         select.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
         select.setText("SELECT");
@@ -350,25 +351,25 @@ public class add_userform extends javax.swing.JFrame {
         sform.setLayout(sformLayout);
         sformLayout.setHorizontalGroup(
             sformLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 670, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 990, Short.MAX_VALUE)
         );
         sformLayout.setVerticalGroup(
             sformLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 580, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
         );
 
         jPanel1.add(sform);
-        sform.setBounds(0, 0, 670, 580);
+        sform.setBounds(0, 0, 990, 700);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 666, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 990, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 701, Short.MAX_VALUE)
         );
 
         pack();

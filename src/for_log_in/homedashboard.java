@@ -96,10 +96,11 @@ public class homedashboard extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
+        jTextArea4 = new javax.swing.JTextArea();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         scrollPane = new javax.swing.JScrollPane();
         jPanel5 = new javax.swing.JPanel();
         jLabel23 = new javax.swing.JLabel();
@@ -140,6 +141,30 @@ public class homedashboard extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         jSeparator7 = new javax.swing.JSeparator();
         jLabel33 = new javax.swing.JLabel();
+        jPanel11 = new javax.swing.JPanel();
+        jLabel35 = new javax.swing.JLabel();
+        jPanel16 = new javax.swing.JPanel();
+        jLabel36 = new javax.swing.JLabel();
+        jPanel17 = new javax.swing.JPanel();
+        jLabel37 = new javax.swing.JLabel();
+        jPanel18 = new javax.swing.JPanel();
+        jLabel38 = new javax.swing.JLabel();
+        jPanel19 = new javax.swing.JPanel();
+        jLabel39 = new javax.swing.JLabel();
+        jPanel20 = new javax.swing.JPanel();
+        jLabel40 = new javax.swing.JLabel();
+        jSeparator8 = new javax.swing.JSeparator();
+        jLabel41 = new javax.swing.JLabel();
+        jSeparator9 = new javax.swing.JSeparator();
+        jLabel42 = new javax.swing.JLabel();
+        jSeparator10 = new javax.swing.JSeparator();
+        jLabel43 = new javax.swing.JLabel();
+        jSeparator11 = new javax.swing.JSeparator();
+        jLabel44 = new javax.swing.JLabel();
+        jSeparator12 = new javax.swing.JSeparator();
+        jLabel45 = new javax.swing.JLabel();
+        jSeparator13 = new javax.swing.JSeparator();
+        jLabel46 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         login = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
@@ -155,6 +180,13 @@ public class homedashboard extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
+        jLabel47 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel58 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -179,27 +211,38 @@ public class homedashboard extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(244, 229, 204));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Candara", 1, 80)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Friend");
-        jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, -1, -1));
-
-        jLabel3.setFont(new java.awt.Font("Candara", 0, 50)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Find ");
-        jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, -1, -1));
-
-        jLabel4.setFont(new java.awt.Font("Candara", 0, 40)); // NOI18N
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("your ");
-        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, -1, -1));
+        jTextArea4.setEditable(false);
+        jTextArea4.setColumns(20);
+        jTextArea4.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
+        jTextArea4.setRows(5);
+        jTextArea4.setTabSize(10);
+        jTextArea4.setText("\"Animals are such agreeable friends—they ask \n         no questions; they pass no criticisms.\" \n                          — George Eliot");
+        jTextArea4.setBorder(null);
+        jTextArea4.setDoubleBuffered(true);
+        jPanel4.add(jTextArea4, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 140, 290, 160));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/25-wall.jpg"))); // NOI18N
         jLabel5.setText("jLabel1");
-        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, 540, 230));
+        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 0, 540, 230));
+
+        jLabel4.setFont(new java.awt.Font("Pristina", 0, 100)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("riend");
+        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 60, 240, 130));
+
+        jLabel2.setFont(new java.awt.Font("Pristina", 1, 300)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("F");
+        jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 10, 270, 320));
+
+        jLabel3.setFont(new java.awt.Font("Pristina", 0, 70)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("ind your");
+        jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 230, 100));
 
         jPanel3.add(jPanel4);
-        jPanel4.setBounds(0, 0, 660, 230);
+        jPanel4.setBounds(0, 0, 990, 230);
 
         scrollPane.setBorder(null);
         scrollPane.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -224,7 +267,7 @@ public class homedashboard extends javax.swing.JFrame {
 
         jLabel23.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
         jLabel23.setText("Feedback");
-        jPanel5.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 480, -1, 20));
+        jPanel5.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 480, -1, 30));
 
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
@@ -234,7 +277,7 @@ public class homedashboard extends javax.swing.JFrame {
         jPanel7.add(jLabel26);
         jLabel26.setBounds(20, 10, 90, 20);
 
-        jPanel5.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 510, 450, 120));
+        jPanel5.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 510, 810, 120));
 
         jPanel9.setBackground(new java.awt.Color(255, 255, 255));
         jPanel9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
@@ -243,7 +286,7 @@ public class homedashboard extends javax.swing.JFrame {
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconforcats/images (2) (2).jpg"))); // NOI18N
         jPanel9.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 110, 110));
 
-        jPanel5.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 130, 110, 90));
+        jPanel5.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 130, 110, 90));
 
         jPanel10.setBackground(new java.awt.Color(255, 255, 255));
         jPanel10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
@@ -264,7 +307,7 @@ public class homedashboard extends javax.swing.JFrame {
         jLabel34.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel12.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 130, 120));
 
-        jPanel5.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, 110, 90));
+        jPanel5.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 10, 110, 90));
 
         jPanel13.setBackground(new java.awt.Color(255, 255, 255));
         jPanel13.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
@@ -275,7 +318,7 @@ public class homedashboard extends javax.swing.JFrame {
         jLabel27.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel13.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 170, 200));
 
-        jPanel5.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, 110, 90));
+        jPanel5.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, 110, 90));
 
         jPanel14.setBackground(new java.awt.Color(255, 255, 255));
         jPanel14.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
@@ -295,7 +338,7 @@ public class homedashboard extends javax.swing.JFrame {
         jLabel8.setText("jLabel8");
         jPanel15.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, -30, -1, -1));
 
-        jPanel5.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 110, 90));
+        jPanel5.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, 110, 90));
 
         jPanel6.setBackground(new java.awt.Color(255, 208, 144));
         jPanel6.setLayout(null);
@@ -304,57 +347,57 @@ public class homedashboard extends javax.swing.JFrame {
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("Know our Numbers");
         jPanel6.add(jLabel12);
-        jLabel12.setBounds(170, 0, 130, 18);
+        jLabel12.setBounds(340, 0, 130, 30);
 
         jLabel15.setFont(new java.awt.Font("Candara", 1, 60)); // NOI18N
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel15.setText("14");
         jPanel6.add(jLabel15);
-        jLabel15.setBounds(350, 40, 100, 60);
+        jLabel15.setBounds(520, 40, 100, 60);
 
         jLabel17.setFont(new java.awt.Font("Candara", 1, 12)); // NOI18N
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel17.setText("years of service");
         jPanel6.add(jLabel17);
-        jLabel17.setBounds(350, 100, 100, 20);
+        jLabel17.setBounds(520, 100, 100, 20);
 
         jLabel20.setFont(new java.awt.Font("Candara", 0, 100)); // NOI18N
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel20.setText("|");
         jPanel6.add(jLabel20);
-        jLabel20.setBounds(300, 30, 30, 100);
+        jLabel20.setBounds(470, 30, 30, 100);
 
         jLabel21.setFont(new java.awt.Font("Candara", 1, 60)); // NOI18N
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel21.setText("50+");
         jPanel6.add(jLabel21);
-        jLabel21.setBounds(30, 40, 100, 50);
+        jLabel21.setBounds(200, 40, 100, 50);
 
         jLabel48.setFont(new java.awt.Font("Candara", 1, 12)); // NOI18N
         jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel48.setText("serving");
         jPanel6.add(jLabel48);
-        jLabel48.setBounds(190, 100, 100, 20);
+        jLabel48.setBounds(360, 100, 100, 20);
 
         jLabel49.setFont(new java.awt.Font("Candara", 1, 60)); // NOI18N
         jLabel49.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel49.setText("100+");
         jPanel6.add(jLabel49);
-        jLabel49.setBounds(180, 40, 120, 50);
+        jLabel49.setBounds(350, 40, 120, 50);
 
         jLabel50.setFont(new java.awt.Font("Candara", 1, 12)); // NOI18N
         jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel50.setText("staff");
         jPanel6.add(jLabel50);
-        jLabel50.setBounds(30, 100, 100, 20);
+        jLabel50.setBounds(200, 100, 100, 20);
 
         jLabel51.setFont(new java.awt.Font("Candara", 0, 100)); // NOI18N
         jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel51.setText("|");
         jPanel6.add(jLabel51);
-        jLabel51.setBounds(140, 30, 30, 100);
+        jLabel51.setBounds(310, 30, 30, 100);
 
-        jPanel5.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 320, 480, 140));
+        jPanel5.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 320, 810, 140));
 
         jLabel57.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
         jLabel57.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -362,25 +405,25 @@ public class homedashboard extends javax.swing.JFrame {
         jPanel5.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, -140, -1, -1));
 
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel5.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, 70, 20));
+        jPanel5.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 230, 70, 20));
 
         jLabel9.setFont(new java.awt.Font("Rockwell", 0, 10)); // NOI18N
         jLabel9.setText("See more");
-        jPanel5.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 220, -1, 10));
+        jPanel5.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, -1, 10));
 
         jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel5.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, 70, 20));
+        jPanel5.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, 70, 20));
 
         jLabel18.setFont(new java.awt.Font("Rockwell", 0, 10)); // NOI18N
         jLabel18.setText("See more");
-        jPanel5.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 100, -1, 10));
+        jPanel5.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, -1, 10));
 
         jSeparator4.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel5.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, 70, 20));
+        jPanel5.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 110, 70, 20));
 
         jLabel19.setFont(new java.awt.Font("Rockwell", 0, 10)); // NOI18N
         jLabel19.setText("See more");
-        jPanel5.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 100, -1, 10));
+        jPanel5.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 100, -1, 10));
 
         jSeparator5.setForeground(new java.awt.Color(0, 0, 0));
         jPanel5.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 70, 20));
@@ -397,20 +440,123 @@ public class homedashboard extends javax.swing.JFrame {
         jPanel5.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, -1, 10));
 
         jSeparator7.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel5.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 230, 70, 20));
+        jPanel5.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 230, 70, 20));
 
         jLabel33.setFont(new java.awt.Font("Rockwell", 0, 10)); // NOI18N
         jLabel33.setText("See more");
-        jPanel5.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 220, -1, 10));
+        jPanel5.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 220, -1, 10));
+
+        jPanel11.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel11.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
+        jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconforcats/images (2) (2).jpg"))); // NOI18N
+        jPanel11.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 110, 110));
+
+        jPanel5.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 130, 110, 90));
+
+        jPanel16.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel16.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
+        jPanel16.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/3c12985fa7345871ea3e7d44bdad069f.jpg"))); // NOI18N
+        jLabel36.setText("jLabel5");
+        jLabel36.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel16.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 110, 90));
+
+        jPanel5.add(jPanel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, 110, -1));
+
+        jPanel17.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel17.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
+        jPanel17.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/eedcf4ff189d37226b0dae8353a1357e_1.jpg"))); // NOI18N
+        jLabel37.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel17.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 130, 120));
+
+        jPanel5.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 10, 110, 90));
+
+        jPanel18.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel18.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
+        jPanel18.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/face6.jpg"))); // NOI18N
+        jLabel38.setText(" ");
+        jLabel38.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel18.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 170, 200));
+
+        jPanel5.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 10, 110, 90));
+
+        jPanel19.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel19.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
+        jPanel19.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/face8.jpg"))); // NOI18N
+        jLabel39.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel19.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 130, 100));
+
+        jPanel5.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 130, 110, 90));
+
+        jPanel20.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel20.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
+        jPanel20.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconforcats/https___tf-cmsv2-smithsonianmag-media.s3.amazonaws.com_filer_public_55_95_55958815-3a8a-4032-ac7a-ff8c8ec8898a_gettyimages-1067956982.png"))); // NOI18N
+        jLabel40.setText("jLabel8");
+        jPanel20.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, -30, -1, -1));
+
+        jPanel5.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 130, 110, 90));
+
+        jSeparator8.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel5.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 230, 70, 20));
+
+        jLabel41.setFont(new java.awt.Font("Rockwell", 0, 10)); // NOI18N
+        jLabel41.setText("See more");
+        jPanel5.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 220, -1, 10));
+
+        jSeparator9.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel5.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 110, 70, 20));
+
+        jLabel42.setFont(new java.awt.Font("Rockwell", 0, 10)); // NOI18N
+        jLabel42.setText("See more");
+        jPanel5.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 100, -1, 10));
+
+        jSeparator10.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel5.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 110, 70, 20));
+
+        jLabel43.setFont(new java.awt.Font("Rockwell", 0, 10)); // NOI18N
+        jLabel43.setText("See more");
+        jPanel5.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 100, -1, 10));
+
+        jSeparator11.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel5.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 230, 70, 20));
+
+        jLabel44.setFont(new java.awt.Font("Rockwell", 0, 10)); // NOI18N
+        jLabel44.setText("See more");
+        jPanel5.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 220, -1, 10));
+
+        jSeparator12.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel5.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 110, 70, 20));
+
+        jLabel45.setFont(new java.awt.Font("Rockwell", 0, 10)); // NOI18N
+        jLabel45.setText("See more");
+        jPanel5.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 100, -1, 10));
+
+        jSeparator13.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel5.add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 230, 70, 20));
+
+        jLabel46.setFont(new java.awt.Font("Rockwell", 0, 10)); // NOI18N
+        jLabel46.setText("See more");
+        jPanel5.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 220, -1, 10));
 
         scrollPane.setViewportView(jPanel5);
 
         jPanel3.add(scrollPane);
-        scrollPane.setBounds(0, 330, 670, 250);
+        scrollPane.setBounds(0, 340, 990, 360);
 
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
         jPanel3.add(jSeparator1);
-        jSeparator1.setBounds(0, 240, 640, 10);
+        jSeparator1.setBounds(10, 240, 970, 10);
 
         login.setBackground(new java.awt.Color(255, 255, 255));
         login.setFont(new java.awt.Font("Rockwell", 0, 12)); // NOI18N
@@ -434,11 +580,11 @@ public class homedashboard extends javax.swing.JFrame {
             }
         });
         jPanel3.add(login);
-        login.setBounds(490, 250, 70, 20);
+        login.setBounds(790, 250, 70, 20);
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
         jPanel3.add(jLabel10);
-        jLabel10.setBounds(610, 280, 24, 30);
+        jLabel10.setBounds(960, 240, 24, 30);
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
         jPanel3.add(jLabel11);
@@ -456,7 +602,7 @@ public class homedashboard extends javax.swing.JFrame {
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Find Here");
         jPanel3.add(jLabel6);
-        jLabel6.setBounds(10, 300, 100, 20);
+        jLabel6.setBounds(0, 310, 100, 30);
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
         jPanel3.add(jLabel16);
@@ -472,7 +618,7 @@ public class homedashboard extends javax.swing.JFrame {
 
         jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
         jPanel3.add(jLabel30);
-        jLabel30.setBounds(540, 300, 24, 30);
+        jLabel30.setBounds(540, 310, 24, 30);
 
         jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
         jPanel3.add(jLabel31);
@@ -482,7 +628,7 @@ public class homedashboard extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Rockwell", 0, 12)); // NOI18N
         jButton1.setText("Home");
         jPanel3.add(jButton1);
-        jButton1.setBounds(80, 250, 65, 20);
+        jButton1.setBounds(170, 250, 65, 20);
 
         jButton7.setBackground(new java.awt.Color(255, 255, 255));
         jButton7.setFont(new java.awt.Font("Rockwell", 0, 12)); // NOI18N
@@ -493,23 +639,51 @@ public class homedashboard extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jButton7);
-        jButton7.setBounds(350, 250, 83, 20);
+        jButton7.setBounds(580, 250, 83, 20);
 
         jButton8.setBackground(new java.awt.Color(255, 255, 255));
         jButton8.setFont(new java.awt.Font("Rockwell", 0, 12)); // NOI18N
         jButton8.setText("Services");
         jPanel3.add(jButton8);
-        jButton8.setBounds(210, 250, 79, 20);
+        jButton8.setBounds(380, 250, 79, 20);
+
+        jLabel47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
+        jPanel3.add(jLabel47);
+        jLabel47.setBounds(610, 280, 24, 30);
+
+        jLabel52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
+        jPanel3.add(jLabel52);
+        jLabel52.setBounds(670, 250, 24, 30);
+
+        jLabel53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
+        jPanel3.add(jLabel53);
+        jLabel53.setBounds(720, 300, 24, 30);
+
+        jLabel54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
+        jPanel3.add(jLabel54);
+        jLabel54.setBounds(780, 260, 24, 30);
+
+        jLabel55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
+        jPanel3.add(jLabel55);
+        jLabel55.setBounds(840, 310, 24, 30);
+
+        jLabel56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
+        jPanel3.add(jLabel56);
+        jLabel56.setBounds(920, 290, 24, 30);
+
+        jLabel58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
+        jPanel3.add(jLabel58);
+        jLabel58.setBounds(870, 240, 24, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 656, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 990, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 701, Short.MAX_VALUE)
         );
 
         pack();
@@ -617,23 +791,48 @@ public class homedashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
+    private javax.swing.JPanel jPanel18;
+    private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel20;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
@@ -641,12 +840,19 @@ public class homedashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator10;
+    private javax.swing.JSeparator jSeparator11;
+    private javax.swing.JSeparator jSeparator12;
+    private javax.swing.JSeparator jSeparator13;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JSeparator jSeparator8;
+    private javax.swing.JSeparator jSeparator9;
+    private javax.swing.JTextArea jTextArea4;
     private javax.swing.JButton login;
     public javax.swing.JScrollPane scrollPane;
     // End of variables declaration//GEN-END:variables

@@ -73,7 +73,7 @@ public class accountDetails extends javax.swing.JFrame {
                 jLabel1MouseClicked(evt);
             }
         });
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 100, 110));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 100, 110));
 
         acc_ln.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
         acc_ln.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -83,7 +83,7 @@ public class accountDetails extends javax.swing.JFrame {
                 acc_lnMouseClicked(evt);
             }
         });
-        jPanel2.add(acc_ln, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 70, -1));
+        jPanel2.add(acc_ln, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 70, -1));
 
         acc_fn.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
         acc_fn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -93,7 +93,7 @@ public class accountDetails extends javax.swing.JFrame {
                 acc_fnMouseClicked(evt);
             }
         });
-        jPanel2.add(acc_fn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 70, -1));
+        jPanel2.add(acc_fn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 70, -1));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
@@ -103,7 +103,7 @@ public class accountDetails extends javax.swing.JFrame {
         type.setForeground(new java.awt.Color(153, 153, 153));
         type.setText("Account Type");
         jPanel4.add(type);
-        type.setBounds(260, 170, 90, 18);
+        type.setBounds(470, 50, 90, 18);
 
         up.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "User" }));
         up.addActionListener(new java.awt.event.ActionListener() {
@@ -112,7 +112,7 @@ public class accountDetails extends javax.swing.JFrame {
             }
         });
         jPanel4.add(up);
-        up.setBounds(260, 190, 80, 20);
+        up.setBounds(470, 70, 80, 20);
 
         us.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,13 +120,13 @@ public class accountDetails extends javax.swing.JFrame {
             }
         });
         jPanel4.add(us);
-        us.setBounds(60, 280, 130, 40);
+        us.setBounds(90, 310, 340, 40);
 
         user_name.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
         user_name.setForeground(new java.awt.Color(153, 153, 153));
         user_name.setText("Username:");
         jPanel4.add(user_name);
-        user_name.setBounds(60, 260, 65, 18);
+        user_name.setBounds(90, 290, 65, 18);
 
         fn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -134,21 +134,21 @@ public class accountDetails extends javax.swing.JFrame {
             }
         });
         jPanel4.add(fn);
-        fn.setBounds(60, 70, 130, 40);
+        fn.setBounds(90, 70, 340, 40);
 
         first_name.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
         first_name.setForeground(new java.awt.Color(153, 153, 153));
         first_name.setText("First Name:");
         jPanel4.add(first_name);
-        first_name.setBounds(60, 50, 67, 18);
+        first_name.setBounds(90, 50, 67, 18);
         jPanel4.add(ln);
-        ln.setBounds(60, 170, 130, 40);
+        ln.setBounds(90, 190, 340, 40);
 
         last_name.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
         last_name.setForeground(new java.awt.Color(153, 153, 153));
         last_name.setText("Last Name:");
         jPanel4.add(last_name);
-        last_name.setBounds(60, 150, 66, 18);
+        last_name.setBounds(90, 170, 66, 18);
 
         em.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,20 +156,20 @@ public class accountDetails extends javax.swing.JFrame {
             }
         });
         jPanel4.add(em);
-        em.setBounds(260, 280, 130, 40);
+        em.setBounds(90, 440, 340, 40);
 
         e_mail.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
         e_mail.setForeground(new java.awt.Color(153, 153, 153));
         e_mail.setText("Email:");
         jPanel4.add(e_mail);
-        e_mail.setBounds(260, 260, 35, 18);
+        e_mail.setBounds(90, 420, 35, 20);
 
-        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, 440, 370));
+        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, 760, 530));
 
         iddisplay.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
         iddisplay.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         iddisplay.setText("UID");
-        jPanel2.add(iddisplay, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 90, 20));
+        jPanel2.add(iddisplay, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 90, 20));
 
         jLabel2.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -177,10 +177,10 @@ public class accountDetails extends javax.swing.JFrame {
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 310, 30));
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel8.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 0, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("LogOut");
+        jLabel8.setText("Log Out");
         jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel8MouseClicked(evt);
@@ -189,9 +189,9 @@ public class accountDetails extends javax.swing.JFrame {
                 jLabel8MouseExited(evt);
             }
         });
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 550, 68, -1));
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 680, 68, -1));
 
-        changepass.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
+        changepass.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
         changepass.setForeground(new java.awt.Color(0, 0, 255));
         changepass.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         changepass.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-change-25.png"))); // NOI18N
@@ -201,7 +201,7 @@ public class accountDetails extends javax.swing.JFrame {
                 changepassMouseClicked(evt);
             }
         });
-        jPanel2.add(changepass, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 550, -1, 20));
+        jPanel2.add(changepass, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 680, -1, 20));
 
         jLabel19.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -214,20 +214,20 @@ public class accountDetails extends javax.swing.JFrame {
         jPanel2.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         maindesktopuser.add(jPanel2);
-        jPanel2.setBounds(0, 0, 660, 580);
+        jPanel2.setBounds(0, 0, 990, 700);
 
         jPanel1.add(maindesktopuser);
-        maindesktopuser.setBounds(0, 0, 690, 580);
+        maindesktopuser.setBounds(0, 0, 990, 700);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 655, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 990, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 701, Short.MAX_VALUE)
         );
 
         pack();

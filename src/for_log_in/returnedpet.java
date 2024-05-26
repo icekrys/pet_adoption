@@ -61,10 +61,10 @@ public class returnedpet extends javax.swing.JFrame {
         jScrollPane1.setViewportView(returnedtable);
 
         jPanel3.add(jScrollPane1);
-        jScrollPane1.setBounds(10, 10, 620, 480);
+        jScrollPane1.setBounds(10, 10, 950, 610);
 
         jPanel1.add(jPanel3);
-        jPanel3.setBounds(10, 60, 640, 500);
+        jPanel3.setBounds(10, 60, 970, 630);
 
         jLabel1.setFont(new java.awt.Font("Rockwell", 1, 18)); // NOI18N
         jLabel1.setText("Returned");
@@ -86,11 +86,11 @@ public class returnedpet extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 656, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 990, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 701, Short.MAX_VALUE)
         );
 
         pack();

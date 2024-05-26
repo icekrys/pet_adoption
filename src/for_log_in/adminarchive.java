@@ -66,10 +66,10 @@ public class adminarchive extends javax.swing.JFrame {
         archive.setViewportView(archivestable);
 
         jPanel4.add(archive);
-        archive.setBounds(16, 17, 610, 470);
+        archive.setBounds(16, 17, 920, 570);
 
         jPanel1.add(jPanel4);
-        jPanel4.setBounds(10, 50, 640, 510);
+        jPanel4.setBounds(20, 80, 950, 600);
 
         jLabel1.setFont(new java.awt.Font("Rockwell", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -92,11 +92,11 @@ public class adminarchive extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 661, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 990, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 701, Short.MAX_VALUE)
         );
 
         pack();

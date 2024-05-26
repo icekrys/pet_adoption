@@ -76,10 +76,10 @@ public class foradoptedpet extends javax.swing.JFrame {
         jScrollPane1.setViewportView(adoptedTable);
 
         jPanel2.add(jScrollPane1);
-        jScrollPane1.setBounds(10, 10, 610, 470);
+        jScrollPane1.setBounds(10, 10, 950, 600);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(10, 70, 630, 490);
+        jPanel2.setBounds(10, 70, 970, 620);
 
         jLabel1.setFont(new java.awt.Font("Rockwell", 1, 18)); // NOI18N
         jLabel1.setText("Adopted");
@@ -87,7 +87,7 @@ public class foradoptedpet extends javax.swing.JFrame {
         jLabel1.setBounds(10, 32, 80, 40);
 
         archivebutton.setBackground(new java.awt.Color(255, 255, 255));
-        archivebutton.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
+        archivebutton.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
         archivebutton.setText("Archive");
         archivebutton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -100,17 +100,17 @@ public class foradoptedpet extends javax.swing.JFrame {
             }
         });
         jPanel1.add(archivebutton);
-        archivebutton.setBounds(570, 40, 70, 30);
+        archivebutton.setBounds(890, 40, 90, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 656, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 990, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 701, Short.MAX_VALUE)
         );
 
         pack();

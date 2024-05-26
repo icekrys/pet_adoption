@@ -32,10 +32,10 @@ public class admindashboard extends javax.swing.JFrame {
 
         maindesktop = new javax.swing.JDesktopPane();
         jPanel4 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -72,37 +72,38 @@ public class admindashboard extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(244, 229, 204));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Candara", 1, 80)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Friend");
-        jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, -1));
-
-        jLabel3.setFont(new java.awt.Font("Candara", 0, 50)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Find ");
-        jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, -1, -1));
-
-        jLabel4.setFont(new java.awt.Font("Candara", 0, 40)); // NOI18N
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("your ");
-        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, -1, -1));
-
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/25-wall.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
-        jPanel4.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 540, 290));
+        jPanel4.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 0, 500, 290));
+
+        jLabel2.setFont(new java.awt.Font("Pristina", 1, 300)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("F");
+        jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 10, 270, 320));
+
+        jLabel4.setFont(new java.awt.Font("Pristina", 0, 100)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("riend");
+        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 60, 240, 130));
+
+        jLabel3.setFont(new java.awt.Font("Pristina", 0, 70)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("ind your");
+        jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 230, 100));
 
         maindesktop.add(jPanel4);
-        jPanel4.setBounds(0, 20, 670, 230);
+        jPanel4.setBounds(0, 20, 1000, 230);
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel8.setFont(new java.awt.Font("Candara", 1, 12)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Home");
-        jPanel5.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, -1, 20));
+        jPanel5.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 70, 20));
 
-        jLabel10.setFont(new java.awt.Font("Candara", 1, 12)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("Add Pets");
         jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -110,14 +111,14 @@ public class admindashboard extends javax.swing.JFrame {
                 jLabel10MouseClicked(evt);
             }
         });
-        jPanel5.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 260, -1, 20));
+        jPanel5.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, 90, 20));
 
-        jLabel9.setFont(new java.awt.Font("Candara", 1, 12)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Services");
-        jPanel5.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, -1, 20));
+        jPanel5.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, 80, 20));
 
-        jLabel11.setFont(new java.awt.Font("Candara", 1, 12)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("Archive");
         jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -125,9 +126,9 @@ public class admindashboard extends javax.swing.JFrame {
                 jLabel11MouseClicked(evt);
             }
         });
-        jPanel5.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, -1, 20));
+        jPanel5.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 260, 80, 20));
 
-        manageaccount.setFont(new java.awt.Font("Candara", 1, 12)); // NOI18N
+        manageaccount.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         manageaccount.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         manageaccount.setText("Manage Account");
         manageaccount.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -135,9 +136,9 @@ public class admindashboard extends javax.swing.JFrame {
                 manageaccountMouseClicked(evt);
             }
         });
-        jPanel5.add(manageaccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 260, -1, 20));
+        jPanel5.add(manageaccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 260, 140, 20));
 
-        jLabel7.setFont(new java.awt.Font("Candara", 1, 12)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Log Out");
         jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -145,27 +146,26 @@ public class admindashboard extends javax.swing.JFrame {
                 jLabel7MouseClicked(evt);
             }
         });
-        jPanel5.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 260, -1, 20));
+        jPanel5.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 260, 80, 20));
 
-        jLabel12.setFont(new java.awt.Font("Candara", 1, 12)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("About Us");
-        jPanel5.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 260, -1, 20));
+        jPanel5.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 260, 90, 20));
 
         jLabel5.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Our Services");
-        jPanel5.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, -1, -1));
+        jPanel5.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 282, 110, 40));
 
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel5.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 640, 10));
+        jPanel5.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 960, 10));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
         jPanel2.setLayout(null);
 
-        report.setFont(new java.awt.Font("Candara", 1, 12)); // NOI18N
-        report.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        report.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
         report.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-report-25.png"))); // NOI18N
         report.setText("Report");
         report.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -174,11 +174,10 @@ public class admindashboard extends javax.swing.JFrame {
             }
         });
         jPanel2.add(report);
-        report.setBounds(40, 130, 65, 25);
+        report.setBounds(90, 200, 140, 25);
 
         jLabel28.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel28.setFont(new java.awt.Font("Candara", 1, 12)); // NOI18N
-        jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel28.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
         jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-customer-25.png"))); // NOI18N
         jLabel28.setText("Customers");
         jLabel28.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -187,7 +186,7 @@ public class admindashboard extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jLabel28);
-        jLabel28.setBounds(380, 130, 84, 25);
+        jLabel28.setBounds(560, 200, 160, 25);
 
         jScrollPane3.setBackground(new java.awt.Color(255, 255, 255));
         jScrollPane3.setBorder(null);
@@ -199,7 +198,7 @@ public class admindashboard extends javax.swing.JFrame {
 
         jTextArea3.setEditable(false);
         jTextArea3.setColumns(20);
-        jTextArea3.setFont(new java.awt.Font("Candara", 0, 10)); // NOI18N
+        jTextArea3.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
         jTextArea3.setRows(5);
         jTextArea3.setTabSize(10);
         jTextArea3.setText("Through every adoption report,\n we celebrate the heartwarming stories\n of pets finding their forever homes.\n Each statistic is a testament to the love\n and compassion that transforms lives,\n one furry friend at a time.");
@@ -208,7 +207,7 @@ public class admindashboard extends javax.swing.JFrame {
         jScrollPane3.setViewportView(jTextArea3);
 
         jPanel2.add(jScrollPane3);
-        jScrollPane3.setBounds(380, 160, 180, 80);
+        jScrollPane3.setBounds(560, 230, 320, 110);
 
         jScrollPane2.setBackground(new java.awt.Color(255, 255, 255));
         jScrollPane2.setBorder(null);
@@ -220,7 +219,7 @@ public class admindashboard extends javax.swing.JFrame {
 
         jTextArea2.setEditable(false);
         jTextArea2.setColumns(20);
-        jTextArea2.setFont(new java.awt.Font("Candara", 0, 10)); // NOI18N
+        jTextArea2.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
         jTextArea2.setRows(5);
         jTextArea2.setTabSize(10);
         jTextArea2.setText("Paws and whiskers, wagging tails and joyful barks – pets bring \nboundless love and happiness into our lives, \nreminding us daily of the purest forms of \ncompanionship and joy.");
@@ -229,9 +228,9 @@ public class admindashboard extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTextArea2);
 
         jPanel2.add(jScrollPane2);
-        jScrollPane2.setBounds(40, 160, 160, 60);
+        jScrollPane2.setBounds(90, 230, 400, 100);
 
-        jLabel14.setFont(new java.awt.Font("Candara", 1, 12)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-note-25.png"))); // NOI18N
         jLabel14.setText("Record Of Adopted Pets");
         jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -240,11 +239,10 @@ public class admindashboard extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jLabel14);
-        jLabel14.setBounds(380, 20, 160, 25);
+        jLabel14.setBounds(560, 30, 240, 25);
 
         petbutton.setBackground(new java.awt.Color(255, 255, 255));
         petbutton.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
-        petbutton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         petbutton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-pets-25.png"))); // NOI18N
         petbutton.setText("Pets");
         petbutton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -259,7 +257,7 @@ public class admindashboard extends javax.swing.JFrame {
             }
         });
         jPanel2.add(petbutton);
-        petbutton.setBounds(40, 20, 63, 25);
+        petbutton.setBounds(90, 30, 140, 25);
 
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setBorder(null);
@@ -271,16 +269,16 @@ public class admindashboard extends javax.swing.JFrame {
 
         jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Candara", 0, 10)); // NOI18N
+        jTextArea1.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
         jTextArea1.setRows(5);
         jTextArea1.setTabSize(10);
-        jTextArea1.setText("Our customers aren't just patrons; they're\n paw-some companions on a journey of\n pet parenthood. With every interaction,\n we strive to wag more tails and purr \nmore contentedly, ensuring that each\n furry friend and their human gets the\n care and attention they deserve.");
+        jTextArea1.setText("Our customers aren't just patrons  they're\n paw-some companions on a journey of\n pet parenthood. With every interaction,\n we strive to wag more tails and purr \nmore contentedly, ensuring that each\n furry friend and their human gets the\n care and attention they deserve.");
         jTextArea1.setBorder(null);
         jTextArea1.setDoubleBuffered(true);
         jScrollPane1.setViewportView(jTextArea1);
 
         jPanel2.add(jScrollPane1);
-        jScrollPane1.setBounds(40, 50, 160, 65);
+        jScrollPane1.setBounds(90, 60, 330, 130);
 
         jScrollPane4.setBackground(new java.awt.Color(255, 255, 255));
         jScrollPane4.setBorder(null);
@@ -292,7 +290,7 @@ public class admindashboard extends javax.swing.JFrame {
 
         jTextArea4.setEditable(false);
         jTextArea4.setColumns(20);
-        jTextArea4.setFont(new java.awt.Font("Candara", 0, 10)); // NOI18N
+        jTextArea4.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
         jTextArea4.setRows(5);
         jTextArea4.setTabSize(10);
         jTextArea4.setText("Every record of adopted pets tells a story\n of hope and a new beginning. \nThese records are a testament to the\n countless lives changed by love, \nshowcasing the journey from shelter.");
@@ -301,11 +299,11 @@ public class admindashboard extends javax.swing.JFrame {
         jScrollPane4.setViewportView(jTextArea4);
 
         jPanel2.add(jScrollPane4);
-        jScrollPane4.setBounds(380, 50, 180, 70);
+        jScrollPane4.setBounds(560, 60, 280, 120);
 
-        jPanel5.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 600, 250));
+        jPanel5.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 950, 360));
 
-        account_fname.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        account_fname.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         account_fname.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         account_fname.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-customer-25.png"))); // NOI18N
         account_fname.setText("ADMIN!");
@@ -314,7 +312,7 @@ public class admindashboard extends javax.swing.JFrame {
                 account_fnameMouseClicked(evt);
             }
         });
-        jPanel5.add(account_fname, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 280, 150, 40));
+        jPanel5.add(account_fname, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 280, 180, 40));
 
         jLabel19.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -322,17 +320,17 @@ public class admindashboard extends javax.swing.JFrame {
         jPanel5.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 20));
 
         maindesktop.add(jPanel5);
-        jPanel5.setBounds(0, 0, 660, 590);
+        jPanel5.setBounds(0, 0, 990, 700);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(maindesktop, javax.swing.GroupLayout.DEFAULT_SIZE, 658, Short.MAX_VALUE)
+            .addComponent(maindesktop, javax.swing.GroupLayout.DEFAULT_SIZE, 990, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(maindesktop, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
+            .addComponent(maindesktop, javax.swing.GroupLayout.DEFAULT_SIZE, 701, Short.MAX_VALUE)
         );
 
         pack();

@@ -29,14 +29,6 @@ public class Likepet extends javax.swing.JFrame {
 
         jPanel13 = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
-        jPanel19 = new javax.swing.JPanel();
-        jLabel35 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel30 = new javax.swing.JLabel();
-        jLabel36 = new javax.swing.JLabel();
         scrolling = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
@@ -54,12 +46,32 @@ public class Likepet extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
+        jPanel25 = new javax.swing.JPanel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jPanel26 = new javax.swing.JPanel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jPanel27 = new javax.swing.JPanel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jPanel28 = new javax.swing.JPanel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
         jPanel24 = new javax.swing.JPanel();
         jLabel21 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jPanel19 = new javax.swing.JPanel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -78,51 +90,6 @@ public class Likepet extends javax.swing.JFrame {
         });
         jPanel13.add(jLabel24);
         jLabel24.setBounds(0, 0, 30, 20);
-
-        jPanel19.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cat_1.png"))); // NOI18N
-        jLabel35.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel19.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -10, -1, -1));
-
-        jPanel13.add(jPanel19);
-        jPanel19.setBounds(40, 40, 120, 130);
-
-        jLabel8.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("Gender:");
-        jPanel13.add(jLabel8);
-        jLabel8.setBounds(170, 130, 49, 15);
-
-        jLabel9.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setText("Name:");
-        jPanel13.add(jLabel9);
-        jLabel9.setBounds(170, 70, 40, 15);
-
-        jLabel10.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setText("Age:");
-        jPanel13.add(jLabel10);
-        jLabel10.setBounds(170, 90, 27, 15);
-
-        jLabel11.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setText("Breed:");
-        jPanel13.add(jLabel11);
-        jLabel11.setBounds(170, 110, 39, 15);
-
-        jLabel30.setFont(new java.awt.Font("Rockwell", 0, 10)); // NOI18N
-        jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel30.setText("female");
-        jPanel13.add(jLabel30);
-        jLabel30.setBounds(220, 130, 40, 13);
-
-        jLabel36.setFont(new java.awt.Font("Rockwell", 0, 10)); // NOI18N
-        jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel36.setText("boss");
-        jPanel13.add(jLabel36);
-        jLabel36.setBounds(200, 70, 50, 13);
 
         scrolling.setBackground(new java.awt.Color(255, 255, 255));
         scrolling.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -151,7 +118,7 @@ public class Likepet extends javax.swing.JFrame {
 
         jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/eedcf4ff189d37226b0dae8353a1357e_1.jpg"))); // NOI18N
         jLabel37.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel21.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -30, 110, -1));
+        jPanel21.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -30, 110, 160));
 
         jPanel1.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 100, 100));
 
@@ -191,49 +158,131 @@ public class Likepet extends javax.swing.JFrame {
         jLabel20.setText("Name");
         jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 360, -1, -1));
 
+        jPanel25.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/eedcf4ff189d37226b0dae8353a1357e_1.jpg"))); // NOI18N
+        jLabel38.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel25.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -30, 110, 150));
+
+        jPanel1.add(jPanel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 600, 100, 100));
+
+        jLabel17.setFont(new java.awt.Font("Rockwell", 0, 10)); // NOI18N
+        jLabel17.setText("Name");
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 600, -1, -1));
+
+        jPanel26.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/eedcf4ff189d37226b0dae8353a1357e_1.jpg"))); // NOI18N
+        jLabel39.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel26.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -30, 110, 150));
+
+        jPanel1.add(jPanel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 720, 100, 100));
+
+        jLabel25.setFont(new java.awt.Font("Rockwell", 0, 10)); // NOI18N
+        jLabel25.setText("Name");
+        jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 720, -1, -1));
+
+        jPanel27.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/eedcf4ff189d37226b0dae8353a1357e_1.jpg"))); // NOI18N
+        jLabel40.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel27.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -30, 110, 140));
+
+        jPanel1.add(jPanel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 960, 100, 100));
+
+        jLabel22.setFont(new java.awt.Font("Rockwell", 0, 10)); // NOI18N
+        jLabel22.setText("Name");
+        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 960, -1, -1));
+
+        jPanel28.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/eedcf4ff189d37226b0dae8353a1357e_1.jpg"))); // NOI18N
+        jLabel41.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel28.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 110, 110));
+
+        jPanel1.add(jPanel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 840, 100, 100));
+
+        jLabel23.setFont(new java.awt.Font("Rockwell", 0, 10)); // NOI18N
+        jLabel23.setText("Name");
+        jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 850, -1, -1));
+
         scrolling.setViewportView(jPanel1);
 
         jPanel13.add(scrolling);
-        scrolling.setBounds(520, 40, 180, 520);
+        scrolling.setBounds(680, 40, 310, 660);
 
         jPanel24.setBackground(new java.awt.Color(255, 255, 255));
         jPanel24.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
         jPanel24.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel21.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
+        jLabel21.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-checkout-30.png"))); // NOI18N
         jLabel21.setText(" Favorites");
-        jPanel24.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 20, 100, -1));
+        jPanel24.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 20, 140, -1));
 
-        jLabel3.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         jLabel3.setText("Behavior");
         jPanel24.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, -1, 20));
 
-        jLabel4.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         jLabel4.setText(" Formal Foster Parent");
         jPanel24.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         jLabel5.setText("Likes ");
         jPanel24.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 200, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         jLabel2.setText("Dislikes");
         jPanel24.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 350, -1, -1));
 
+        jLabel36.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
+        jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel36.setText("boss");
+        jPanel24.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, 50, 20));
+
+        jLabel30.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
+        jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel30.setText("female");
+        jPanel24.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 120, 40, 20));
+
+        jPanel19.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cat_1.png"))); // NOI18N
+        jLabel35.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel19.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 150, -1));
+
+        jPanel24.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 150, 130));
+
+        jLabel8.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
+        jLabel8.setText("Gender:");
+        jPanel24.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 70, -1));
+
+        jLabel11.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
+        jLabel11.setText("Breed:");
+        jPanel24.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, -1, -1));
+
+        jLabel10.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
+        jLabel10.setText("Age:");
+        jPanel24.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, -1, -1));
+
+        jLabel9.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
+        jLabel9.setText("Name:");
+        jPanel24.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, -1, -1));
+
         jPanel13.add(jPanel24);
-        jPanel24.setBounds(10, 40, 500, 520);
+        jPanel24.setBounds(20, 40, 650, 650);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, 990, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, 570, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, 701, Short.MAX_VALUE)
         );
 
         pack();
@@ -289,18 +338,26 @@ public class Likepet extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -314,6 +371,10 @@ public class Likepet extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel24;
+    private javax.swing.JPanel jPanel25;
+    private javax.swing.JPanel jPanel26;
+    private javax.swing.JPanel jPanel27;
+    private javax.swing.JPanel jPanel28;
     private javax.swing.JScrollPane scrolling;
     // End of variables declaration//GEN-END:variables
 }

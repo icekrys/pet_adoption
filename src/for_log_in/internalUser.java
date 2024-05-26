@@ -60,7 +60,7 @@ public class internalUser extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
 
-        useraccount_name.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        useraccount_name.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         useraccount_name.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         useraccount_name.setText("Add");
         useraccount_name.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -73,9 +73,9 @@ public class internalUser extends javax.swing.JFrame {
             }
         });
         jPanel1.add(useraccount_name);
-        useraccount_name.setBounds(250, 30, 50, 20);
+        useraccount_name.setBounds(600, 30, 50, 20);
 
-        update1.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        update1.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         update1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         update1.setText("Edit");
         update1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -88,9 +88,9 @@ public class internalUser extends javax.swing.JFrame {
             }
         });
         jPanel1.add(update1);
-        update1.setBounds(320, 30, 60, 20);
+        update1.setBounds(670, 30, 60, 20);
 
-        jLabel2.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Delete");
         jLabel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -100,9 +100,9 @@ public class internalUser extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(400, 30, 60, 20);
+        jLabel2.setBounds(750, 30, 60, 20);
 
-        archive.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        archive.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         archive.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         archive.setText("Archive");
         archive.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -115,9 +115,9 @@ public class internalUser extends javax.swing.JFrame {
             }
         });
         jPanel1.add(archive);
-        archive.setBounds(480, 30, 70, 20);
+        archive.setBounds(830, 30, 70, 20);
 
-        print.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        print.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         print.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         print.setText("Print");
         print.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -127,7 +127,7 @@ public class internalUser extends javax.swing.JFrame {
             }
         });
         jPanel1.add(print);
-        print.setBounds(570, 30, 60, 20);
+        print.setBounds(920, 30, 60, 20);
 
         jLabel19.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -155,10 +155,10 @@ public class internalUser extends javax.swing.JFrame {
         jScrollPane1.setViewportView(usersTable);
 
         jPanel2.add(jScrollPane1);
-        jScrollPane1.setBounds(10, 10, 620, 500);
+        jScrollPane1.setBounds(10, 10, 950, 620);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(10, 50, 640, 520);
+        jPanel2.setBounds(10, 50, 970, 640);
 
         jLabel1.setFont(new java.awt.Font("Rockwell", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -170,11 +170,11 @@ public class internalUser extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 655, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 990, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 582, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 701, Short.MAX_VALUE)
         );
 
         pack();

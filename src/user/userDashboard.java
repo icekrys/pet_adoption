@@ -99,6 +99,30 @@ public class userDashboard extends javax.swing.JFrame {
         jSeparator6 = new javax.swing.JSeparator();
         jLabel59 = new javax.swing.JLabel();
         jSeparator7 = new javax.swing.JSeparator();
+        jPanel23 = new javax.swing.JPanel();
+        jLabel60 = new javax.swing.JLabel();
+        jLabel61 = new javax.swing.JLabel();
+        jSeparator8 = new javax.swing.JSeparator();
+        jPanel28 = new javax.swing.JPanel();
+        jLabel62 = new javax.swing.JLabel();
+        jLabel63 = new javax.swing.JLabel();
+        jSeparator9 = new javax.swing.JSeparator();
+        jPanel29 = new javax.swing.JPanel();
+        jLabel65 = new javax.swing.JLabel();
+        jLabel67 = new javax.swing.JLabel();
+        jSeparator10 = new javax.swing.JSeparator();
+        jPanel32 = new javax.swing.JPanel();
+        jLabel68 = new javax.swing.JLabel();
+        jLabel69 = new javax.swing.JLabel();
+        jSeparator11 = new javax.swing.JSeparator();
+        jSeparator12 = new javax.swing.JSeparator();
+        jLabel71 = new javax.swing.JLabel();
+        jPanel33 = new javax.swing.JPanel();
+        jLabel70 = new javax.swing.JLabel();
+        jPanel34 = new javax.swing.JPanel();
+        jLabel72 = new javax.swing.JLabel();
+        jLabel73 = new javax.swing.JLabel();
+        jSeparator13 = new javax.swing.JSeparator();
         jLabel13 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
@@ -143,15 +167,15 @@ public class userDashboard extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Candara", 2, 30)); // NOI18N
         jLabel3.setText("Stay stuned ...");
-        jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 330, -1));
+        jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 330, -1));
 
         jLabel4.setFont(new java.awt.Font("Candara", 2, 30)); // NOI18N
         jLabel4.setText("Events will happen soon....");
-        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 330, -1));
+        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 330, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/25-wall.jpg"))); // NOI18N
         jLabel5.setText("jLabel1");
-        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, -10, 540, 290));
+        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 0, 550, 190));
 
         jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
         jPanel4.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 90, -1, 30));
@@ -160,7 +184,7 @@ public class userDashboard extends javax.swing.JFrame {
         jPanel4.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 160, -1, 30));
 
         jPanel3.add(jPanel4);
-        jPanel4.setBounds(0, 40, 730, 190);
+        jPanel4.setBounds(0, 40, 990, 190);
 
         useraccount_name.setFont(new java.awt.Font("Rockwell", 0, 12)); // NOI18N
         useraccount_name.setText("User Name");
@@ -182,7 +206,7 @@ public class userDashboard extends javax.swing.JFrame {
         jPanel3.add(jLabel30);
         jLabel30.setBounds(0, 0, 40, 40);
 
-        jLabel9.setFont(new java.awt.Font("Candara", 1, 12)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Pets");
         jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -191,9 +215,9 @@ public class userDashboard extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jLabel9);
-        jLabel9.setBounds(140, 240, 22, 20);
+        jLabel9.setBounds(180, 240, 30, 20);
 
-        jLabel16.setFont(new java.awt.Font("Candara", 1, 12)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel16.setText("Adopt Pet");
         jLabel16.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -202,9 +226,9 @@ public class userDashboard extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jLabel16);
-        jLabel16.setBounds(200, 240, 53, 20);
+        jLabel16.setBounds(270, 240, 69, 20);
 
-        jLabel27.setFont(new java.awt.Font("Candara", 1, 12)); // NOI18N
+        jLabel27.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel27.setText("Update Data");
         jLabel27.setToolTipText("");
@@ -214,12 +238,12 @@ public class userDashboard extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jLabel27);
-        jLabel27.setBounds(290, 240, 70, 20);
+        jLabel27.setBounds(390, 240, 110, 20);
 
-        jLabel29.setFont(new java.awt.Font("Candara", 1, 12)); // NOI18N
+        jLabel29.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         jLabel29.setText("Home");
         jPanel3.add(jLabel29);
-        jLabel29.setBounds(70, 240, 31, 20);
+        jLabel29.setBounds(70, 240, 40, 20);
 
         jPanel9.setBackground(new java.awt.Color(255, 255, 255));
         jPanel9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
@@ -232,24 +256,24 @@ public class userDashboard extends javax.swing.JFrame {
         jPanel3.add(jPanel9);
         jPanel9.setBounds(220, 0, 200, 20);
 
-        jLabel8.setFont(new java.awt.Font("Candara", 1, 12)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         jLabel8.setText("Donations");
         jPanel3.add(jLabel8);
-        jLabel8.setBounds(600, 240, 60, 20);
+        jLabel8.setBounds(840, 240, 90, 20);
 
-        jLabel10.setFont(new java.awt.Font("Candara", 1, 12)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         jLabel10.setText("Success Stories");
         jPanel3.add(jLabel10);
-        jLabel10.setBounds(400, 240, 80, 20);
+        jLabel10.setBounds(550, 240, 110, 20);
 
-        jLabel11.setFont(new java.awt.Font("Candara", 1, 12)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         jLabel11.setText("Pet care");
         jPanel3.add(jLabel11);
-        jLabel11.setBounds(510, 240, 50, 20);
+        jLabel11.setBounds(720, 240, 60, 20);
 
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
         jPanel3.add(jSeparator1);
-        jSeparator1.setBounds(40, 240, 650, 10);
+        jSeparator1.setBounds(40, 240, 910, 10);
 
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
         jPanel7.addMouseWheelListener(new java.awt.event.MouseWheelListener() {
@@ -269,9 +293,9 @@ public class userDashboard extends javax.swing.JFrame {
         jPanel17.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconforcats/images (2) (2).jpg"))); // NOI18N
-        jPanel17.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 110, 110));
+        jPanel17.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 120, 110));
 
-        jPanel7.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 140, 110, 90));
+        jPanel7.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 160, 110, 90));
 
         jPanel18.setBackground(new java.awt.Color(255, 255, 255));
         jPanel18.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
@@ -282,7 +306,7 @@ public class userDashboard extends javax.swing.JFrame {
         jLabel54.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel18.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 110, 90));
 
-        jPanel7.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 110, -1));
+        jPanel7.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, 110, -1));
 
         jPanel19.setBackground(new java.awt.Color(255, 255, 255));
         jPanel19.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
@@ -290,9 +314,9 @@ public class userDashboard extends javax.swing.JFrame {
 
         jLabel55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/eedcf4ff189d37226b0dae8353a1357e_1.jpg"))); // NOI18N
         jLabel55.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel19.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 130, 120));
+        jPanel19.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 110, 90));
 
-        jPanel7.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 20, 110, 90));
+        jPanel7.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 20, 110, 90));
 
         jPanel20.setBackground(new java.awt.Color(255, 255, 255));
         jPanel20.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
@@ -301,9 +325,9 @@ public class userDashboard extends javax.swing.JFrame {
         jLabel56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/face6.jpg"))); // NOI18N
         jLabel56.setText(" ");
         jLabel56.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel20.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 170, 200));
+        jPanel20.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(-50, -10, 170, 180));
 
-        jPanel7.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 20, 110, 90));
+        jPanel7.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 20, 110, 90));
 
         jPanel21.setBackground(new java.awt.Color(255, 255, 255));
         jPanel21.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
@@ -311,9 +335,9 @@ public class userDashboard extends javax.swing.JFrame {
 
         jLabel58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/face8.jpg"))); // NOI18N
         jLabel58.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel21.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 130, 100));
+        jPanel21.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 110, 90));
 
-        jPanel7.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, 110, 90));
+        jPanel7.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, 110, 90));
 
         jPanel22.setBackground(new java.awt.Color(255, 255, 255));
         jPanel22.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
@@ -321,9 +345,9 @@ public class userDashboard extends javax.swing.JFrame {
 
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconforcats/https___tf-cmsv2-smithsonianmag-media.s3.amazonaws.com_filer_public_55_95_55958815-3a8a-4032-ac7a-ff8c8ec8898a_gettyimages-1067956982.png"))); // NOI18N
         jLabel18.setText("jLabel8");
-        jPanel22.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, -30, -1, -1));
+        jPanel22.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 140, 120));
 
-        jPanel7.add(jPanel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 140, 110, 90));
+        jPanel7.add(jPanel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 160, 110, 90));
 
         jLabel100.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
         jLabel100.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -336,22 +360,23 @@ public class userDashboard extends javax.swing.JFrame {
         jPanel26.setBackground(new java.awt.Color(255, 255, 255));
         jPanel26.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         jPanel26.setLayout(null);
-        jPanel24.add(jPanel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, 450, 120));
+        jPanel24.add(jPanel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, 780, 120));
 
         jPanel25.setBackground(new java.awt.Color(118, 199, 234));
-        jPanel25.setLayout(new java.awt.BorderLayout());
+        jPanel25.setLayout(null);
 
         jLabel57.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
         jLabel57.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel57.setText("Lost and Found");
-        jPanel25.add(jLabel57, java.awt.BorderLayout.CENTER);
+        jPanel25.add(jLabel57);
+        jLabel57.setBounds(0, 0, 210, 20);
 
-        jPanel24.add(jPanel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 210, 20));
+        jPanel24.add(jPanel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 210, 20));
 
         jPanel27.setBackground(new java.awt.Color(255, 255, 255));
         jPanel27.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         jPanel27.setLayout(null);
-        jPanel24.add(jPanel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 450, 120));
+        jPanel24.add(jPanel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 770, 120));
 
         jPanel6.setBackground(new java.awt.Color(255, 208, 144));
         jPanel6.setLayout(null);
@@ -360,57 +385,57 @@ public class userDashboard extends javax.swing.JFrame {
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("Know our Numbers");
         jPanel6.add(jLabel12);
-        jLabel12.setBounds(170, 10, 130, 18);
+        jLabel12.setBounds(360, 10, 130, 18);
 
-        jLabel15.setFont(new java.awt.Font("Candara", 1, 60)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Candara", 1, 80)); // NOI18N
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel15.setText("1");
         jPanel6.add(jLabel15);
-        jLabel15.setBounds(350, 40, 100, 60);
+        jLabel15.setBounds(540, 30, 100, 70);
 
         jLabel17.setFont(new java.awt.Font("Candara", 1, 12)); // NOI18N
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel17.setText("Found");
         jPanel6.add(jLabel17);
-        jLabel17.setBounds(350, 100, 100, 20);
+        jLabel17.setBounds(540, 100, 100, 20);
 
         jLabel20.setFont(new java.awt.Font("Candara", 0, 100)); // NOI18N
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel20.setText("|");
         jPanel6.add(jLabel20);
-        jLabel20.setBounds(300, 30, 30, 100);
+        jLabel20.setBounds(490, 30, 30, 100);
 
-        jLabel21.setFont(new java.awt.Font("Candara", 1, 60)); // NOI18N
+        jLabel21.setFont(new java.awt.Font("Candara", 1, 80)); // NOI18N
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel21.setText("5");
         jPanel6.add(jLabel21);
-        jLabel21.setBounds(30, 40, 100, 50);
+        jLabel21.setBounds(220, 20, 100, 70);
 
         jLabel48.setFont(new java.awt.Font("Candara", 1, 12)); // NOI18N
         jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel48.setText("Finding");
         jPanel6.add(jLabel48);
-        jLabel48.setBounds(190, 100, 100, 20);
+        jLabel48.setBounds(380, 100, 100, 20);
 
-        jLabel49.setFont(new java.awt.Font("Candara", 1, 60)); // NOI18N
+        jLabel49.setFont(new java.awt.Font("Candara", 1, 80)); // NOI18N
         jLabel49.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel49.setText("4");
         jPanel6.add(jLabel49);
-        jLabel49.setBounds(190, 40, 100, 50);
+        jLabel49.setBounds(380, 20, 100, 70);
 
         jLabel50.setFont(new java.awt.Font("Candara", 1, 12)); // NOI18N
         jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel50.setText("Lost ");
         jPanel6.add(jLabel50);
-        jLabel50.setBounds(30, 100, 100, 20);
+        jLabel50.setBounds(220, 100, 100, 20);
 
         jLabel51.setFont(new java.awt.Font("Candara", 0, 100)); // NOI18N
         jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel51.setText("|");
         jPanel6.add(jLabel51);
-        jLabel51.setBounds(140, 30, 30, 100);
+        jLabel51.setBounds(330, 30, 30, 100);
 
-        jPanel24.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 480, 140));
+        jPanel24.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 490, 810, 140));
 
         jPanel31.setBackground(new java.awt.Color(118, 199, 234));
         jPanel31.setLayout(null);
@@ -421,7 +446,7 @@ public class userDashboard extends javax.swing.JFrame {
         jPanel31.add(jLabel66);
         jLabel66.setBounds(0, 0, 210, 20);
 
-        jPanel24.add(jPanel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 210, 20));
+        jPanel24.add(jPanel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 210, 20));
 
         jPanel30.setBackground(new java.awt.Color(118, 199, 234));
         jPanel30.setLayout(null);
@@ -436,54 +461,156 @@ public class userDashboard extends javax.swing.JFrame {
 
         jScrollPane6.setViewportView(jPanel24);
 
-        jPanel7.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 590, 680));
+        jPanel7.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 960, 680));
 
         jLabel1.setFont(new java.awt.Font("Rockwell", 0, 10)); // NOI18N
         jLabel1.setText("See more");
-        jPanel7.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, -1, 10));
+        jPanel7.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 50, 10));
 
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel7.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 70, 20));
+        jPanel7.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 70, 20));
 
         jLabel2.setFont(new java.awt.Font("Rockwell", 0, 10)); // NOI18N
         jLabel2.setText("See more");
-        jPanel7.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, -1, 10));
+        jPanel7.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 110, 50, 10));
 
         jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel7.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 120, 70, 20));
+        jPanel7.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 120, 70, 20));
 
         jLabel47.setFont(new java.awt.Font("Rockwell", 0, 10)); // NOI18N
         jLabel47.setText("See more");
-        jPanel7.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 110, -1, 10));
+        jPanel7.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 110, 50, 10));
 
         jSeparator4.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel7.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 120, 70, 20));
+        jPanel7.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 120, 70, 20));
 
         jLabel52.setFont(new java.awt.Font("Rockwell", 0, 10)); // NOI18N
         jLabel52.setText("See more");
-        jPanel7.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, -1, 10));
+        jPanel7.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, -1, 10));
 
         jSeparator5.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel7.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 70, 20));
+        jPanel7.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 70, 20));
 
         jLabel53.setFont(new java.awt.Font("Rockwell", 0, 10)); // NOI18N
         jLabel53.setText("See more");
-        jPanel7.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 230, -1, 10));
+        jPanel7.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 250, -1, 10));
 
         jSeparator6.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel7.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 240, 70, 20));
+        jPanel7.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 260, 70, 20));
 
         jLabel59.setFont(new java.awt.Font("Rockwell", 0, 10)); // NOI18N
         jLabel59.setText("See more");
-        jPanel7.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 230, -1, 10));
+        jPanel7.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 250, -1, 10));
 
         jSeparator7.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel7.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 240, 70, 20));
+        jPanel7.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 260, 70, 20));
+
+        jPanel23.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel23.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
+        jPanel23.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/face8.jpg"))); // NOI18N
+        jLabel60.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel23.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 110, 90));
+
+        jPanel7.add(jPanel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, 110, 90));
+
+        jLabel61.setFont(new java.awt.Font("Rockwell", 0, 10)); // NOI18N
+        jLabel61.setText("See more");
+        jPanel7.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 110, -1, 10));
+
+        jSeparator8.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel7.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, 70, 20));
+
+        jPanel28.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel28.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
+        jPanel28.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/face8.jpg"))); // NOI18N
+        jLabel62.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel28.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 110, 90));
+
+        jPanel7.add(jPanel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 160, 110, 90));
+
+        jLabel63.setFont(new java.awt.Font("Rockwell", 0, 10)); // NOI18N
+        jLabel63.setText("See more");
+        jPanel7.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 250, -1, 10));
+
+        jSeparator9.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel7.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 260, 70, 20));
+
+        jPanel29.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel29.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
+        jPanel29.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel65.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/face8.jpg"))); // NOI18N
+        jLabel65.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel29.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 110, 90));
+
+        jPanel7.add(jPanel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 110, 90));
+
+        jLabel67.setFont(new java.awt.Font("Rockwell", 0, 10)); // NOI18N
+        jLabel67.setText("See more");
+        jPanel7.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, 10));
+
+        jSeparator10.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel7.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 70, 20));
+
+        jPanel32.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel32.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
+        jPanel32.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel68.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/face8.jpg"))); // NOI18N
+        jLabel68.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel32.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 110, 90));
+
+        jPanel7.add(jPanel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 110, 90));
+
+        jLabel69.setFont(new java.awt.Font("Rockwell", 0, 10)); // NOI18N
+        jLabel69.setText("See more");
+        jPanel7.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, -1, 10));
+
+        jSeparator11.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel7.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 70, 20));
+
+        jSeparator12.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel7.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 260, 70, 20));
+
+        jLabel71.setFont(new java.awt.Font("Rockwell", 0, 10)); // NOI18N
+        jLabel71.setText("See more");
+        jPanel7.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 250, -1, 10));
+
+        jPanel33.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel33.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
+        jPanel33.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel70.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/face8.jpg"))); // NOI18N
+        jLabel70.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel33.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 110, 90));
+
+        jPanel7.add(jPanel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 160, 110, -1));
+
+        jPanel34.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel34.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
+        jPanel34.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel72.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/face8.jpg"))); // NOI18N
+        jLabel72.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel34.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 110, 90));
+
+        jPanel7.add(jPanel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 20, 110, 90));
+
+        jLabel73.setFont(new java.awt.Font("Rockwell", 0, 10)); // NOI18N
+        jLabel73.setText("See more");
+        jPanel7.add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 110, -1, 10));
+
+        jSeparator13.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel7.add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 120, 70, 20));
 
         jScrollPane8.setViewportView(jPanel7);
 
         jPanel3.add(jScrollPane8);
-        jScrollPane8.setBounds(0, 310, 730, 390);
+        jScrollPane8.setBounds(0, 310, 990, 390);
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
         jPanel3.add(jLabel13);
@@ -572,7 +699,7 @@ public class userDashboard extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(null);
 
-        service1.setFont(new java.awt.Font("Candara", 1, 12)); // NOI18N
+        service1.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         service1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         service1.setText("Services");
         service1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -584,15 +711,15 @@ public class userDashboard extends javax.swing.JFrame {
             }
         });
         jPanel2.add(service1);
-        service1.setBounds(10, 0, 42, 20);
+        service1.setBounds(30, 0, 60, 20);
 
         jPanel3.add(jPanel2);
-        jPanel2.setBounds(510, 0, 70, 20);
+        jPanel2.setBounds(690, 0, 110, 20);
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setLayout(null);
 
-        aboutus2.setFont(new java.awt.Font("Candara", 1, 12)); // NOI18N
+        aboutus2.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         aboutus2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         aboutus2.setText("About Us");
         aboutus2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -604,10 +731,10 @@ public class userDashboard extends javax.swing.JFrame {
             }
         });
         jPanel5.add(aboutus2);
-        aboutus2.setBounds(10, 0, 50, 20);
+        aboutus2.setBounds(0, 0, 80, 20);
 
         jPanel3.add(jPanel5);
-        jPanel5.setBounds(580, 0, 70, 20);
+        jPanel5.setBounds(850, 0, 90, 20);
 
         jLabel46.setFont(new java.awt.Font("Rockwell", 1, 14)); // NOI18N
         jLabel46.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -619,11 +746,11 @@ public class userDashboard extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 726, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 990, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 695, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 701, Short.MAX_VALUE)
         );
 
         pack();
@@ -657,14 +784,6 @@ public class userDashboard extends javax.swing.JFrame {
 
     }//GEN-LAST:event_useraccount_nameMouseClicked
 
-    private void jPanel7MouseWheelMoved(java.awt.event.MouseWheelEvent evt) {//GEN-FIRST:event_jPanel7MouseWheelMoved
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPanel7MouseWheelMoved
-
-    private void jPanel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPanel7MouseClicked
-
     private void service1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_service1MouseEntered
         service1.setBackground(clickColor);
     }//GEN-LAST:event_service1MouseEntered
@@ -694,6 +813,14 @@ public class userDashboard extends javax.swing.JFrame {
            useraccount_name.setText(""+sess.getFname());
         }
     }//GEN-LAST:event_formWindowActivated
+
+    private void jPanel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPanel7MouseClicked
+
+    private void jPanel7MouseWheelMoved(java.awt.event.MouseWheelEvent evt) {//GEN-FIRST:event_jPanel7MouseWheelMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPanel7MouseWheelMoved
 
     /**
      * @param args the command line arguments
@@ -791,9 +918,21 @@ public class userDashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel58;
     private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
+    private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel70;
+    private javax.swing.JLabel jLabel71;
+    private javax.swing.JLabel jLabel72;
+    private javax.swing.JLabel jLabel73;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel17;
@@ -803,13 +942,19 @@ public class userDashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel20;
     private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel22;
+    private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel24;
     private javax.swing.JPanel jPanel25;
     private javax.swing.JPanel jPanel26;
     private javax.swing.JPanel jPanel27;
+    private javax.swing.JPanel jPanel28;
+    private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel30;
     private javax.swing.JPanel jPanel31;
+    private javax.swing.JPanel jPanel32;
+    private javax.swing.JPanel jPanel33;
+    private javax.swing.JPanel jPanel34;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
@@ -818,12 +963,18 @@ public class userDashboard extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator10;
+    private javax.swing.JSeparator jSeparator11;
+    private javax.swing.JSeparator jSeparator12;
+    private javax.swing.JSeparator jSeparator13;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JSeparator jSeparator8;
+    private javax.swing.JSeparator jSeparator9;
     private javax.swing.JLabel service1;
     public javax.swing.JLabel useraccount_name;
     // End of variables declaration//GEN-END:variables

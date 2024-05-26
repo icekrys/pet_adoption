@@ -62,10 +62,10 @@ public class adminpets extends javax.swing.JFrame {
         jScrollPane1.setViewportView(pettable);
 
         jPanel2.add(jScrollPane1);
-        jScrollPane1.setBounds(16, 17, 600, 470);
+        jScrollPane1.setBounds(16, 17, 940, 600);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(10, 60, 630, 500);
+        jPanel2.setBounds(10, 60, 970, 630);
 
         jLabel19.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -84,7 +84,7 @@ public class adminpets extends javax.swing.JFrame {
         jLabel1.setBounds(10, 20, 100, 40);
 
         archivebutton.setBackground(new java.awt.Color(255, 255, 255));
-        archivebutton.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
+        archivebutton.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
         archivebutton.setText("Return");
         archivebutton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -97,17 +97,17 @@ public class adminpets extends javax.swing.JFrame {
             }
         });
         jPanel1.add(archivebutton);
-        archivebutton.setBounds(570, 30, 70, 30);
+        archivebutton.setBounds(890, 30, 90, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 658, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 990, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 701, Short.MAX_VALUE)
         );
 
         pack();

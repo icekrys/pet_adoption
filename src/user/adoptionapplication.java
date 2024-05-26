@@ -60,18 +60,22 @@ public class adoptionapplication extends javax.swing.JFrame {
         jPanel1.setLayout(null);
 
         jLabel3.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(204, 204, 204));
         jLabel3.setText("Name");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(40, 50, 50, 20);
+        jLabel3.setBounds(270, 70, 50, 20);
+
+        nm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nmActionPerformed(evt);
+            }
+        });
         jPanel1.add(nm);
-        nm.setBounds(40, 70, 150, 40);
+        nm.setBounds(270, 90, 400, 40);
 
         jLabel4.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(204, 204, 204));
         jLabel4.setText("Age");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(40, 170, 50, 20);
+        jLabel4.setBounds(270, 190, 50, 20);
 
         ag.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,13 +83,12 @@ public class adoptionapplication extends javax.swing.JFrame {
             }
         });
         jPanel1.add(ag);
-        ag.setBounds(40, 190, 150, 40);
+        ag.setBounds(270, 210, 400, 40);
 
         jLabel5.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(204, 204, 204));
         jLabel5.setText("Breed");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(40, 290, 50, 20);
+        jLabel5.setBounds(270, 310, 50, 20);
 
         br.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,20 +96,19 @@ public class adoptionapplication extends javax.swing.JFrame {
             }
         });
         jPanel1.add(br);
-        br.setBounds(40, 310, 150, 40);
+        br.setBounds(270, 330, 400, 40);
 
         gen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Female", "Male" }));
         jPanel1.add(gen);
-        gen.setBounds(40, 440, 80, 30);
+        gen.setBounds(270, 460, 80, 30);
 
         jLabel7.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(204, 204, 204));
         jLabel7.setText("Gender");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(40, 420, 50, 20);
+        jLabel7.setBounds(270, 440, 50, 20);
 
         c_label.setBackground(new java.awt.Color(255, 255, 255));
-        c_label.setFont(new java.awt.Font("Rockwell", 0, 12)); // NOI18N
+        c_label.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
         c_label.setText("Add");
         c_label.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,15 +116,15 @@ public class adoptionapplication extends javax.swing.JFrame {
             }
         });
         jPanel1.add(c_label);
-        c_label.setBounds(260, 450, 80, 20);
-
-        customerpanel.add(jPanel1);
-        jPanel1.setBounds(20, 40, 370, 520);
+        c_label.setBounds(580, 470, 80, 20);
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/25-wall.jpg"))); // NOI18N
         jLabel8.setText("jLabel1");
-        customerpanel.add(jLabel8);
-        jLabel8.setBounds(170, 30, 550, 340);
+        jPanel1.add(jLabel8);
+        jLabel8.setBounds(450, -20, 550, 340);
+
+        customerpanel.add(jPanel1);
+        jPanel1.setBounds(20, 40, 950, 640);
 
         jLabel19.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -139,11 +141,11 @@ public class adoptionapplication extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(customerpanel, javax.swing.GroupLayout.DEFAULT_SIZE, 655, Short.MAX_VALUE)
+            .addComponent(customerpanel, javax.swing.GroupLayout.DEFAULT_SIZE, 990, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(customerpanel, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
+            .addComponent(customerpanel, javax.swing.GroupLayout.DEFAULT_SIZE, 701, Short.MAX_VALUE)
         );
 
         pack();
@@ -187,6 +189,10 @@ public class adoptionapplication extends javax.swing.JFrame {
         up.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel19MouseClicked
+
+    private void nmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nmActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nmActionPerformed
 
     /**
      * @param args the command line arguments
