@@ -49,6 +49,8 @@ public class accountDetails extends javax.swing.JFrame {
         last_name = new javax.swing.JLabel();
         em = new javax.swing.JTextField();
         e_mail = new javax.swing.JLabel();
+        cn = new javax.swing.JTextField();
+        contact = new javax.swing.JLabel();
         iddisplay = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -120,13 +122,13 @@ public class accountDetails extends javax.swing.JFrame {
             }
         });
         jPanel4.add(us);
-        us.setBounds(90, 310, 340, 40);
+        us.setBounds(90, 270, 340, 40);
 
         user_name.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
         user_name.setForeground(new java.awt.Color(153, 153, 153));
         user_name.setText("Username:");
         jPanel4.add(user_name);
-        user_name.setBounds(90, 290, 65, 18);
+        user_name.setBounds(90, 250, 65, 20);
 
         fn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -142,13 +144,13 @@ public class accountDetails extends javax.swing.JFrame {
         jPanel4.add(first_name);
         first_name.setBounds(90, 50, 67, 18);
         jPanel4.add(ln);
-        ln.setBounds(90, 190, 340, 40);
+        ln.setBounds(90, 170, 340, 40);
 
         last_name.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
         last_name.setForeground(new java.awt.Color(153, 153, 153));
         last_name.setText("Last Name:");
         jPanel4.add(last_name);
-        last_name.setBounds(90, 170, 66, 18);
+        last_name.setBounds(90, 150, 66, 18);
 
         em.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,13 +158,27 @@ public class accountDetails extends javax.swing.JFrame {
             }
         });
         jPanel4.add(em);
-        em.setBounds(90, 440, 340, 40);
+        em.setBounds(90, 380, 340, 40);
 
         e_mail.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
         e_mail.setForeground(new java.awt.Color(153, 153, 153));
         e_mail.setText("Email:");
         jPanel4.add(e_mail);
-        e_mail.setBounds(90, 420, 35, 20);
+        e_mail.setBounds(90, 360, 35, 20);
+
+        cn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cnActionPerformed(evt);
+            }
+        });
+        jPanel4.add(cn);
+        cn.setBounds(90, 470, 340, 40);
+
+        contact.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
+        contact.setForeground(new java.awt.Color(153, 153, 153));
+        contact.setText("Contact:");
+        jPanel4.add(contact);
+        contact.setBounds(90, 450, 60, 20);
 
         jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, 760, 530));
 
@@ -283,6 +299,7 @@ public class accountDetails extends javax.swing.JFrame {
        us.setText(""+sess.getUsername());
        fn.setText(""+sess.getFname());
        ln.setText(""+sess.getUsername());
+       cn.setText(""+sess.getUsername());
     }//GEN-LAST:event_formWindowActivated
 
     private void changepassMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_changepassMouseClicked
@@ -297,6 +314,10 @@ public class accountDetails extends javax.swing.JFrame {
       up.setVisible(true);
       this.dispose();
     }//GEN-LAST:event_jLabel19MouseClicked
+
+    private void cnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -338,6 +359,8 @@ public class accountDetails extends javax.swing.JFrame {
     public javax.swing.JLabel acc_fn;
     public javax.swing.JLabel acc_ln;
     private javax.swing.JLabel changepass;
+    public javax.swing.JTextField cn;
+    private javax.swing.JLabel contact;
     private javax.swing.JLabel e_mail;
     public javax.swing.JTextField em;
     private javax.swing.JLabel first_name;

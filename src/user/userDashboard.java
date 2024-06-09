@@ -9,6 +9,11 @@ import for_log_in.*;
 import To_register.re_gister;
 import config.Session;
 import java.awt.Color;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -26,6 +31,7 @@ public class userDashboard extends javax.swing.JFrame {
         
         }
 
+    
     Color navColor = new Color(255,255,255);
     Color clickColor = new Color(164,87,14);
     
@@ -149,6 +155,16 @@ public class userDashboard extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         aboutus2 = new javax.swing.JLabel();
         jLabel46 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel74 = new javax.swing.JLabel();
+        jLabel75 = new javax.swing.JLabel();
+        jLabel76 = new javax.swing.JLabel();
+        jLabel77 = new javax.swing.JLabel();
+        jLabel78 = new javax.swing.JLabel();
+        jLabel79 = new javax.swing.JLabel();
+        jLabel80 = new javax.swing.JLabel();
+        jLabel81 = new javax.swing.JLabel();
+        jLabel82 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -175,7 +191,7 @@ public class userDashboard extends javax.swing.JFrame {
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/25-wall.jpg"))); // NOI18N
         jLabel5.setText("jLabel1");
-        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 0, 550, 190));
+        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 0, 550, 190));
 
         jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
         jPanel4.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 90, -1, 30));
@@ -184,7 +200,7 @@ public class userDashboard extends javax.swing.JFrame {
         jPanel4.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 160, -1, 30));
 
         jPanel3.add(jPanel4);
-        jPanel4.setBounds(0, 40, 990, 190);
+        jPanel4.setBounds(20, 40, 970, 190);
 
         useraccount_name.setFont(new java.awt.Font("Rockwell", 0, 12)); // NOI18N
         useraccount_name.setText("User Name");
@@ -194,7 +210,7 @@ public class userDashboard extends javax.swing.JFrame {
             }
         });
         jPanel3.add(useraccount_name);
-        useraccount_name.setBounds(40, 5, 70, 30);
+        useraccount_name.setBounds(40, 10, 70, 30);
 
         jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-user-52.png"))); // NOI18N
@@ -215,7 +231,7 @@ public class userDashboard extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jLabel9);
-        jLabel9.setBounds(180, 240, 30, 20);
+        jLabel9.setBounds(160, 240, 30, 20);
 
         jLabel16.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -226,7 +242,7 @@ public class userDashboard extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jLabel16);
-        jLabel16.setBounds(270, 240, 69, 20);
+        jLabel16.setBounds(240, 240, 69, 20);
 
         jLabel27.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -238,7 +254,7 @@ public class userDashboard extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jLabel27);
-        jLabel27.setBounds(390, 240, 110, 20);
+        jLabel27.setBounds(350, 240, 110, 20);
 
         jLabel29.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         jLabel29.setText("Home");
@@ -259,21 +275,21 @@ public class userDashboard extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         jLabel8.setText("Donations");
         jPanel3.add(jLabel8);
-        jLabel8.setBounds(840, 240, 90, 20);
+        jLabel8.setBounds(760, 240, 90, 20);
 
         jLabel10.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         jLabel10.setText("Success Stories");
         jPanel3.add(jLabel10);
-        jLabel10.setBounds(550, 240, 110, 20);
+        jLabel10.setBounds(500, 240, 110, 20);
 
         jLabel11.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         jLabel11.setText("Pet care");
         jPanel3.add(jLabel11);
-        jLabel11.setBounds(720, 240, 60, 20);
+        jLabel11.setBounds(660, 240, 60, 20);
 
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
         jPanel3.add(jSeparator1);
-        jSeparator1.setBounds(40, 240, 910, 10);
+        jSeparator1.setBounds(30, 240, 910, 10);
 
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
         jPanel7.addMouseWheelListener(new java.awt.event.MouseWheelListener() {
@@ -614,11 +630,11 @@ public class userDashboard extends javax.swing.JFrame {
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
         jPanel3.add(jLabel13);
-        jLabel13.setBounds(120, 250, 24, 30);
+        jLabel13.setBounds(110, 250, 24, 30);
 
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
         jPanel3.add(jLabel22);
-        jLabel22.setBounds(0, 260, 24, 30);
+        jLabel22.setBounds(980, 240, 24, 30);
 
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
         jPanel3.add(jLabel23);
@@ -626,7 +642,7 @@ public class userDashboard extends javax.swing.JFrame {
 
         jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
         jPanel3.add(jLabel28);
-        jLabel28.setBounds(170, 300, 24, 30);
+        jLabel28.setBounds(160, 290, 24, 30);
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
         jPanel3.add(jLabel14);
@@ -634,7 +650,7 @@ public class userDashboard extends javax.swing.JFrame {
 
         jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
         jPanel3.add(jLabel24);
-        jLabel24.setBounds(330, 300, 24, 30);
+        jLabel24.setBounds(280, 290, 24, 30);
 
         jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
         jPanel3.add(jLabel31);
@@ -642,7 +658,7 @@ public class userDashboard extends javax.swing.JFrame {
 
         jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
         jPanel3.add(jLabel25);
-        jLabel25.setBounds(460, 260, 24, 30);
+        jLabel25.setBounds(340, 250, 24, 30);
 
         jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
         jPanel3.add(jLabel32);
@@ -650,7 +666,7 @@ public class userDashboard extends javax.swing.JFrame {
 
         jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
         jPanel3.add(jLabel26);
-        jLabel26.setBounds(520, 30, 24, 30);
+        jLabel26.setBounds(520, 20, 24, 30);
 
         jLabel33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
         jPanel3.add(jLabel33);
@@ -658,7 +674,7 @@ public class userDashboard extends javax.swing.JFrame {
 
         jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
         jPanel3.add(jLabel34);
-        jLabel34.setBounds(620, 30, 24, 30);
+        jLabel34.setBounds(620, 20, 24, 30);
 
         jLabel36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
         jPanel3.add(jLabel36);
@@ -714,7 +730,7 @@ public class userDashboard extends javax.swing.JFrame {
         service1.setBounds(30, 0, 60, 20);
 
         jPanel3.add(jPanel2);
-        jPanel2.setBounds(690, 0, 110, 20);
+        jPanel2.setBounds(730, 0, 110, 20);
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setLayout(null);
@@ -740,7 +756,54 @@ public class userDashboard extends javax.swing.JFrame {
         jLabel46.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel46.setText("Find Here");
         jPanel3.add(jLabel46);
-        jLabel46.setBounds(10, 280, 100, 20);
+        jLabel46.setBounds(20, 280, 100, 20);
+
+        jLabel19.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel19.setText("Log Out");
+        jLabel19.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel19MouseClicked(evt);
+            }
+        });
+        jPanel3.add(jLabel19);
+        jLabel19.setBounds(880, 240, 55, 21);
+
+        jLabel74.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
+        jPanel3.add(jLabel74);
+        jLabel74.setBounds(710, 260, 24, 30);
+
+        jLabel75.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
+        jPanel3.add(jLabel75);
+        jLabel75.setBounds(750, 300, 24, 30);
+
+        jLabel76.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
+        jPanel3.add(jLabel76);
+        jLabel76.setBounds(810, 260, 24, 30);
+
+        jLabel77.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
+        jPanel3.add(jLabel77);
+        jLabel77.setBounds(850, 300, 24, 30);
+
+        jLabel78.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
+        jPanel3.add(jLabel78);
+        jLabel78.setBounds(910, 250, 24, 30);
+
+        jLabel79.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
+        jPanel3.add(jLabel79);
+        jLabel79.setBounds(950, 290, 24, 30);
+
+        jLabel80.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
+        jPanel3.add(jLabel80);
+        jLabel80.setBounds(30, 240, 24, 30);
+
+        jLabel81.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
+        jPanel3.add(jLabel81);
+        jLabel81.setBounds(0, 280, 24, 30);
+
+        jLabel82.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-paw-24.png"))); // NOI18N
+        jPanel3.add(jLabel82);
+        jLabel82.setBounds(460, 260, 24, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -775,10 +838,6 @@ public class userDashboard extends javax.swing.JFrame {
         up.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel27MouseClicked
-
-    private void jLabel30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel30MouseClicked
-     
-    }//GEN-LAST:event_jLabel30MouseClicked
 
     private void useraccount_nameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_useraccount_nameMouseClicked
 
@@ -821,6 +880,16 @@ public class userDashboard extends javax.swing.JFrame {
     private void jPanel7MouseWheelMoved(java.awt.event.MouseWheelEvent evt) {//GEN-FIRST:event_jPanel7MouseWheelMoved
         // TODO add your handling code here:
     }//GEN-LAST:event_jPanel7MouseWheelMoved
+
+    private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
+        homedashboard up = new homedashboard();
+        up.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel19MouseClicked
+
+    private void jLabel30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel30MouseClicked
+
+    }//GEN-LAST:event_jLabel30MouseClicked
 
     /**
      * @param args the command line arguments
@@ -873,6 +942,7 @@ public class userDashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
@@ -933,7 +1003,16 @@ public class userDashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel71;
     private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel73;
+    private javax.swing.JLabel jLabel74;
+    private javax.swing.JLabel jLabel75;
+    private javax.swing.JLabel jLabel76;
+    private javax.swing.JLabel jLabel77;
+    private javax.swing.JLabel jLabel78;
+    private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel80;
+    private javax.swing.JLabel jLabel81;
+    private javax.swing.JLabel jLabel82;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;

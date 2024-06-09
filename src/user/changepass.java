@@ -139,7 +139,7 @@ public class changepass extends javax.swing.JFrame {
         last_name.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
         last_name.setText("Enter New Password:");
         jPanel5.add(last_name);
-        last_name.setBounds(260, 330, 160, 18);
+        last_name.setBounds(260, 170, 160, 18);
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
@@ -153,7 +153,7 @@ public class changepass extends javax.swing.JFrame {
         acc_ln.setBackground(new java.awt.Color(255, 255, 255));
         acc_ln.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
         acc_ln.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        acc_ln.setText("User");
+        acc_ln.setText("Add");
         acc_ln.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 acc_lnMouseClicked(evt);
@@ -173,12 +173,12 @@ public class changepass extends javax.swing.JFrame {
             }
         });
         jPanel5.add(enpass);
-        enpass.setBounds(250, 350, 390, 50);
+        enpass.setBounds(250, 190, 390, 50);
 
         user_name.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
         user_name.setText("Confirm Password:");
         jPanel5.add(user_name);
-        user_name.setBounds(250, 190, 140, 18);
+        user_name.setBounds(250, 310, 140, 18);
 
         tppass.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         tppass.addActionListener(new java.awt.event.ActionListener() {
@@ -202,7 +202,7 @@ public class changepass extends javax.swing.JFrame {
             }
         });
         jPanel5.add(conpass1);
-        conpass1.setBounds(250, 210, 390, 50);
+        conpass1.setBounds(250, 330, 390, 50);
 
         jPanel3.add(jPanel5);
         jPanel5.setBounds(24, 19, 870, 480);
@@ -363,10 +363,10 @@ public class changepass extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JLabel acc_fn;
-    private javax.swing.JLabel acc_ln;
+    public javax.swing.JLabel acc_ln;
     public javax.swing.JLabel acc_ln1;
     public javax.swing.JTextField conpass1;
-    private javax.swing.JTextField enpass;
+    public javax.swing.JTextField enpass;
     private javax.swing.JLabel first_name;
     private javax.swing.JLabel iddisplay;
     private javax.swing.JLabel jLabel1;
@@ -380,7 +380,7 @@ public class changepass extends javax.swing.JFrame {
     private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JLabel last_name;
     private javax.swing.JDesktopPane maindesktopuser;
-    private javax.swing.JTextField tppass;
+    public javax.swing.JTextField tppass;
     private javax.swing.JLabel user_name;
     // End of variables declaration//GEN-END:variables
 }

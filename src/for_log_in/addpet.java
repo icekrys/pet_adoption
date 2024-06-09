@@ -168,7 +168,7 @@ public class addpet extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jComboBox7);
-        jComboBox7.setBounds(230, 530, 71, 20);
+        jComboBox7.setBounds(230, 530, 80, 20);
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
@@ -274,7 +274,7 @@ public class addpet extends javax.swing.JFrame {
         sex.setFont(new java.awt.Font("Candara", 0, 18)); // NOI18N
         sex.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female" }));
         jPanel1.add(sex);
-        sex.setBounds(340, 530, 70, 28);
+        sex.setBounds(340, 530, 80, 28);
 
         e_mail5.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
         e_mail5.setText("Gender:");

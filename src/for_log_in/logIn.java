@@ -18,6 +18,10 @@ import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 
 
 
@@ -27,8 +31,68 @@ public class logIn extends javax.swing.JFrame {
     
     public logIn() {
         initComponents();
-        
+    
+          // Add KeyListener to user field
+        user.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+                    performLogin();
+                }
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+            }
+        });
+
+        // Add KeyListener to password field
+        pass.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+                    performLogin();
+                }
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+            }
+        });
+
+        // Add FocusListener to user field
+        user.addFocusListener(new FocusListener() {
+            @Override
+            public void focusGained(FocusEvent e) {
+                user.setText(""); // Clear the text field when it gains focus
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) {
+            }
+        });
+
+        // Add FocusListener to password field
+        pass.addFocusListener(new FocusListener() {
+            @Override
+            public void focusGained(FocusEvent e) {
+                pass.setText(""); // Clear the text field when it gains focus
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) {
+            }
+        });
     }
+
     
     Color navColor = new Color(255,255,255);
     Color clickColor = new Color(244,229,204);
@@ -73,9 +137,39 @@ public class logIn extends javax.swing.JFrame {
     }
 
 }
+ private void performLogin() {
+    String enteredUsername = user.getText();
+    String enteredPassword = pass.getText();
+    if (loginAcc(enteredUsername, enteredPassword)) {
+        if (!status.equals("Active")) {
+            JOptionPane.showMessageDialog(null, "Not Active! Contact the Admin!");
+            user.setText(""); 
+        } else {
+            if (type.equals("Admin")) {
+                JOptionPane.showMessageDialog(null, "Login Success!");
+                JOptionPane.showMessageDialog(null, "Welcome Back Admin!!!");
+                admindashboard up = new admindashboard();
+                up.setVisible(true);
+                this.dispose();
+            } else if (type.equals("User")) {
+                JOptionPane.showMessageDialog(null, "Login Success!");
+                userDashboard up = new userDashboard();
+                up.setVisible(true);
+                this.dispose();
+            } else {
+                JOptionPane.showMessageDialog(null, "No Account Type Found!");
+                user.setText(""); 
+            }
+        }
+    } else {
+        JOptionPane.showMessageDialog(null, "Invalid Username or Password!");
+        user.setText(""); 
+        pass.setText(""); 
+    }
+}
 
+ 
 
-     
      
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -315,7 +409,7 @@ public class logIn extends javax.swing.JFrame {
         SecondPanel.setForeground(new java.awt.Color(164, 87, 14));
         SecondPanel.setLayout(null);
 
-        user.setFont(new java.awt.Font("Rockwell", 0, 12)); // NOI18N
+        user.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         user.setDragEnabled(true);
         user.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -368,6 +462,11 @@ public class logIn extends javax.swing.JFrame {
                 loginMouseExited(evt);
             }
         });
+        login.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                loginKeyPressed(evt);
+            }
+        });
         LoginButton.add(login);
         login.setBounds(20, 0, 130, 30);
 
@@ -384,7 +483,7 @@ public class logIn extends javax.swing.JFrame {
             }
         });
         SecondPanel.add(forgotPassword);
-        forgotPassword.setBounds(20, 510, 140, 20);
+        forgotPassword.setBounds(10, 510, 170, 20);
 
         Register.setFont(new java.awt.Font("Candara", 1, 20)); // NOI18N
         Register.setForeground(new java.awt.Color(118, 199, 234));
@@ -408,7 +507,7 @@ public class logIn extends javax.swing.JFrame {
         SecondPanel.add(jLabel2);
         jLabel2.setBounds(80, 240, 70, 20);
 
-        pass.setFont(new java.awt.Font("Rockwell", 0, 12)); // NOI18N
+        pass.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         pass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passActionPerformed(evt);
@@ -1281,7 +1380,7 @@ public class logIn extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 990, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 988, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1455,6 +1554,10 @@ public class logIn extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Login Failed. Invalid Account!");
         }
     }//GEN-LAST:event_LoginButtonMouseClicked
+
+    private void loginKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_loginKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_loginKeyPressed
 
     /**
      * @param args the command line arguments

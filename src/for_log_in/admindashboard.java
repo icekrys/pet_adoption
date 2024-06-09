@@ -40,7 +40,6 @@ public class admindashboard extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
         manageaccount = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -101,7 +100,7 @@ public class admindashboard extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Home");
-        jPanel5.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 70, 20));
+        jPanel5.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 70, 20));
 
         jLabel10.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -111,22 +110,12 @@ public class admindashboard extends javax.swing.JFrame {
                 jLabel10MouseClicked(evt);
             }
         });
-        jPanel5.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, 90, 20));
+        jPanel5.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 260, 90, 20));
 
         jLabel9.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Services");
-        jPanel5.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, 80, 20));
-
-        jLabel11.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setText("Archive");
-        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel11MouseClicked(evt);
-            }
-        });
-        jPanel5.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 260, 80, 20));
+        jPanel5.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 80, 20));
 
         manageaccount.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         manageaccount.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -136,7 +125,7 @@ public class admindashboard extends javax.swing.JFrame {
                 manageaccountMouseClicked(evt);
             }
         });
-        jPanel5.add(manageaccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 260, 140, 20));
+        jPanel5.add(manageaccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 260, 140, 20));
 
         jLabel7.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -151,7 +140,7 @@ public class admindashboard extends javax.swing.JFrame {
         jLabel12.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("About Us");
-        jPanel5.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 260, 90, 20));
+        jPanel5.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 260, 90, 20));
 
         jLabel5.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -385,12 +374,6 @@ public class admindashboard extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_manageaccountMouseClicked
 
-    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
-        adminarchive up = new adminarchive();
-        up.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jLabel11MouseClicked
-
     private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
         addpet up = new addpet();
         up.setVisible(true);
@@ -450,7 +433,6 @@ public class admindashboard extends javax.swing.JFrame {
     public javax.swing.JLabel account_fname;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel19;

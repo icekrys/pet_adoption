@@ -40,7 +40,8 @@ public class adminpets extends javax.swing.JFrame {
         pettable = new javax.swing.JTable();
         jLabel19 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        archivebutton = new javax.swing.JButton();
+        addbutton = new javax.swing.JButton();
+        archivebutton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -83,21 +84,37 @@ public class adminpets extends javax.swing.JFrame {
         jPanel1.add(jLabel1);
         jLabel1.setBounds(10, 20, 100, 40);
 
-        archivebutton.setBackground(new java.awt.Color(255, 255, 255));
-        archivebutton.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
-        archivebutton.setText("Return");
-        archivebutton.addMouseListener(new java.awt.event.MouseAdapter() {
+        addbutton.setBackground(new java.awt.Color(255, 255, 255));
+        addbutton.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
+        addbutton.setText("Add");
+        addbutton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                archivebuttonMouseClicked(evt);
+                addbuttonMouseClicked(evt);
             }
         });
-        archivebutton.addActionListener(new java.awt.event.ActionListener() {
+        addbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                archivebuttonActionPerformed(evt);
+                addbuttonActionPerformed(evt);
             }
         });
-        jPanel1.add(archivebutton);
-        archivebutton.setBounds(890, 30, 90, 30);
+        jPanel1.add(addbutton);
+        addbutton.setBounds(810, 30, 80, 30);
+
+        archivebutton1.setBackground(new java.awt.Color(255, 255, 255));
+        archivebutton1.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
+        archivebutton1.setText("Archive");
+        archivebutton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                archivebutton1MouseClicked(evt);
+            }
+        });
+        archivebutton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                archivebutton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(archivebutton1);
+        archivebutton1.setBounds(900, 30, 80, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -120,29 +137,23 @@ public class adminpets extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jLabel19MouseClicked
 
-    private void archivebuttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_archivebuttonMouseClicked
+    private void addbuttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addbuttonMouseClicked
 
-    }//GEN-LAST:event_archivebuttonMouseClicked
+    }//GEN-LAST:event_addbuttonMouseClicked
 
-    private void archivebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_archivebuttonActionPerformed
-        int selectedRow = pettable.getSelectedRow();
-        if (selectedRow != -1) {
-            int petId = (int) pettable.getValueAt(selectedRow, 0);
-            String archiveQuery = "INSERT INTO tbl_returned SELECT * FROM tbl_pet WHERE p_id = " + petId;
-            String deleteQuery = "DELETE FROM tbl_pet WHERE p_id = " + petId;
-            try {
-                if (connector.archiveData(archiveQuery) && connector.deleteData(deleteQuery)) {
-                    JOptionPane.showMessageDialog(this, "Returned successfully.");
-                    displayUser(); // Refresh the table
-                    return;
-                }
-            } catch (Exception ex) {
-                JOptionPane.showMessageDialog(this, "Error returning pet: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-            }
-        } else {
-            JOptionPane.showMessageDialog(this, "Please select pet to return.", "No Selection", JOptionPane.WARNING_MESSAGE);
-        }
-    }//GEN-LAST:event_archivebuttonActionPerformed
+    private void addbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addbuttonActionPerformed
+       addpet up = new addpet();
+       up.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_addbuttonActionPerformed
+
+    private void archivebutton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_archivebutton1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_archivebutton1MouseClicked
+
+    private void archivebutton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_archivebutton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_archivebutton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -180,7 +191,8 @@ public class adminpets extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton archivebutton;
+    public javax.swing.JButton addbutton;
+    public javax.swing.JButton archivebutton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JPanel jPanel1;

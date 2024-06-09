@@ -73,9 +73,9 @@ public class adminarchive extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Rockwell", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Archive");
+        jLabel1.setText("Archive Customers");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(10, 30, 70, 20);
+        jLabel1.setBounds(20, 50, 170, 20);
 
         jLabel19.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

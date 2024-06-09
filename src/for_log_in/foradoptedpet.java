@@ -26,7 +26,7 @@ public class foradoptedpet extends javax.swing.JFrame {
 
      private void displayUser() {
         try {
-            String query = "SELECT a_id, a_name, a_age, a_gender, a_breed FROM tbl_adopted";
+            String query = "SELECT pa_id, a_name, a_age, a_breed, a_gender, a_image, Date_Adopted FROM tbl_adopted";
             adoptedTable.setModel(DbUtils.resultSetToTableModel(connector.getData(query)));
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(this, "Error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
@@ -43,7 +43,6 @@ public class foradoptedpet extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         adoptedTable = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
-        archivebutton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -86,22 +85,6 @@ public class foradoptedpet extends javax.swing.JFrame {
         jPanel1.add(jLabel1);
         jLabel1.setBounds(10, 32, 80, 40);
 
-        archivebutton.setBackground(new java.awt.Color(255, 255, 255));
-        archivebutton.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
-        archivebutton.setText("Archive");
-        archivebutton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                archivebuttonMouseClicked(evt);
-            }
-        });
-        archivebutton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                archivebuttonActionPerformed(evt);
-            }
-        });
-        jPanel1.add(archivebutton);
-        archivebutton.setBounds(890, 40, 90, 30);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -116,30 +99,6 @@ public class foradoptedpet extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void archivebuttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_archivebuttonMouseClicked
-     
-    }//GEN-LAST:event_archivebuttonMouseClicked
-
-    private void archivebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_archivebuttonActionPerformed
-        int selectedRow = adoptedTable.getSelectedRow();
-        if (selectedRow != -1) {
-            int adoptedId = (int) adoptedTable.getValueAt(selectedRow, 0);
-            String archiveQuery = "INSERT INTO tbl_archived_pets SELECT * FROM tbl_adopted WHERE a_id = " + adoptedId;
-            String deleteQuery = "DELETE FROM tbl_adopted WHERE a_id = " + adoptedId;
-            try {
-                if (connector.archiveData(archiveQuery) && connector.deleteData(deleteQuery)) {
-                    JOptionPane.showMessageDialog(this, "Adopted archived successfully.");
-                    displayUser(); // Refresh the table
-                    return;
-                }
-            } catch (Exception ex) {
-                JOptionPane.showMessageDialog(this, "Error archiving customer: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-            }
-        } else {
-            JOptionPane.showMessageDialog(this, "Please select a customer to archive.", "No Selection", JOptionPane.WARNING_MESSAGE);
-        }
-    }//GEN-LAST:event_archivebuttonActionPerformed
 
     private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
         admindashboard up = new admindashboard();
@@ -184,7 +143,6 @@ public class foradoptedpet extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable adoptedTable;
-    public javax.swing.JButton archivebutton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JPanel jPanel1;

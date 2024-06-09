@@ -44,10 +44,11 @@ public class adoptionapplication extends javax.swing.JFrame {
         ag = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         br = new javax.swing.JTextField();
-        gen = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
         c_label = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
+        genm = new javax.swing.JRadioButton();
+        genf = new javax.swing.JRadioButton();
         jLabel19 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -98,10 +99,6 @@ public class adoptionapplication extends javax.swing.JFrame {
         jPanel1.add(br);
         br.setBounds(270, 330, 400, 40);
 
-        gen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Female", "Male" }));
-        jPanel1.add(gen);
-        gen.setBounds(270, 460, 80, 30);
-
         jLabel7.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         jLabel7.setText("Gender");
         jPanel1.add(jLabel7);
@@ -122,6 +119,26 @@ public class adoptionapplication extends javax.swing.JFrame {
         jLabel8.setText("jLabel1");
         jPanel1.add(jLabel8);
         jLabel8.setBounds(450, -20, 550, 340);
+
+        genm.setBackground(new java.awt.Color(255, 255, 255));
+        genm.setText("Male");
+        genm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                genmActionPerformed(evt);
+            }
+        });
+        jPanel1.add(genm);
+        genm.setBounds(270, 520, 90, 29);
+
+        genf.setBackground(new java.awt.Color(255, 255, 255));
+        genf.setText("Female");
+        genf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                genfActionPerformed(evt);
+            }
+        });
+        jPanel1.add(genf);
+        genf.setBounds(270, 470, 90, 29);
 
         customerpanel.add(jPanel1);
         jPanel1.setBounds(20, 40, 950, 640);
@@ -159,17 +176,16 @@ public class adoptionapplication extends javax.swing.JFrame {
     private void c_labelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c_labelActionPerformed
         String name = nm.getText();
         String age = ag.getText();
-        String gender = gen.getSelectedItem().toString();
+        String gender = action;
         String breed = br.getText();
 
-        if (name.isEmpty() || age.isEmpty() || breed.isEmpty() || gen.getSelectedItem().toString().isEmpty()) {
+        if (name.isEmpty() || age.isEmpty() || breed.isEmpty() || gender.isEmpty()) {
             JOptionPane.showMessageDialog(null, "All fields are required");
             }else{
             try {
                 dbc.insertData("INSERT INTO tbl_adopted(a_name, a_age,a_gender, a_breed) VALUES('" + name + "', '" + age + "', '" + gender + "', '" + breed + "')");
                 JOptionPane.showMessageDialog(null, "Successfully Saved");
                 
-                // After saving, update the admincustomers table
                 userDashboard admin = new userDashboard();
                 admin.setVisible(true);
                 this.dispose();
@@ -193,6 +209,14 @@ public class adoptionapplication extends javax.swing.JFrame {
     private void nmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nmActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nmActionPerformed
+
+    private void genfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genfActionPerformed
+         action = "Female";
+    }//GEN-LAST:event_genfActionPerformed
+
+    private void genmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genmActionPerformed
+         action = "Male"; 
+    }//GEN-LAST:event_genmActionPerformed
 
     /**
      * @param args the command line arguments
@@ -235,7 +259,8 @@ public class adoptionapplication extends javax.swing.JFrame {
     private javax.swing.JTextField br;
     private javax.swing.JButton c_label;
     private javax.swing.JPanel customerpanel;
-    private javax.swing.JComboBox<String> gen;
+    private javax.swing.JRadioButton genf;
+    private javax.swing.JRadioButton genm;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

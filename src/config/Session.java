@@ -18,7 +18,8 @@ public class Session {
     private String username;
     private String type;
     private String status;
-    
+    private String contact;
+      
     private Session()
             {
             
@@ -83,6 +84,10 @@ public class Session {
             public void setType(String type)
             {
                 this. type = type;
+            }
+            public void setContact(String contact)
+            {
+                this. contact = contact;
             }
              public String setStatus()
             {

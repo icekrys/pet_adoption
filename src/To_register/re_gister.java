@@ -9,6 +9,8 @@ import config.dbConnector;
 import config.passwordHasher;
 import for_log_in.homedashboard;
 import for_log_in.logIn;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.security.NoSuchAlgorithmException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -25,8 +27,115 @@ public class re_gister extends javax.swing.JFrame {
      */
     public re_gister() {
         initComponents();
+        addEnterKeyListener();
+    }
+       private void addEnterKeyListener() {
+        KeyListener enterKeyListener = new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {}
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+                    registerUser();
+                }
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {}
+        };
+
+        // Add KeyListener to all text fields
+        fn.addKeyListener(enterKeyListener);
+        ln.addKeyListener(enterKeyListener);
+        em.addKeyListener(enterKeyListener);
+        us.addKeyListener(enterKeyListener);
+        pss.addKeyListener(enterKeyListener);
+        cn.addKeyListener(enterKeyListener);
     }
 
+        private void registerUser() {
+        String firstName = fn.getText();
+        String lastName = ln.getText();
+        String email = em.getText();
+        String username = us.getText();
+        String password = new String(pss.getPassword());
+        String contactNumber = cn.getText();
+
+        // Basic validation
+        if (firstName.isEmpty() || lastName.isEmpty() || email.isEmpty() || username.isEmpty() || password.isEmpty() || contactNumber.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "All fields are required");
+            return;
+        }
+
+        if (password.length() < 8) {
+            JOptionPane.showMessageDialog(null, "Password must be at least 8 characters long");
+            pss.setText("");
+            return;
+        }
+
+        if (contactNumber.length() != 11 || !contactNumber.matches("[0-9]+")) {
+            JOptionPane.showMessageDialog(null, "Contact number must be 11 digits long and contain only numbers");
+            return;
+        }
+
+        if (!email.endsWith("@gmail.com")) {
+            JOptionPane.showMessageDialog(null, "Email must end with @gmail.com");
+            return;
+        }
+
+        // Check for duplicate email or username
+        if (isEmailExists(email)) {
+            JOptionPane.showMessageDialog(null, "Email already exists");
+            return;
+        }
+
+        if (isUsernameExists(username)) {
+            JOptionPane.showMessageDialog(null, "Username already exists");
+            return;
+        }
+
+        // Hash the password before saving
+        try {
+            String hashedPassword = passwordHasher.hashPassword(password);
+            dbConnector dbc = new dbConnector();
+            dbc.insertData("INSERT INTO tbl_user (u_fname, u_lname, u_email, u_username, u_password, u_type, u_status, u_contact) VALUES ('" + firstName + "','" + lastName + "','" + email + "','" + username + "','" + hashedPassword + "','" + up.getSelectedItem() + "','Pending', '" + contactNumber + "') ");
+            JOptionPane.showMessageDialog(null, "You are now Registered!");
+            logIn login = new logIn();
+            login.setVisible(true);
+            this.dispose();
+        } catch (NoSuchAlgorithmException ex) {
+            JOptionPane.showMessageDialog(null, "Error occurred while registering. Please try again later.");
+            System.out.println(ex);
+        }
+    }
+
+    private boolean isEmailExists(String email) {
+        dbConnector dbc = new dbConnector();
+
+        try {
+            String query = "SELECT * FROM tbl_user WHERE u_email = '" + email + "'";
+            ResultSet resultSet = dbc.getData(query);
+            return resultSet.next();
+        } catch (SQLException ex) {
+            System.out.println(ex);
+            return false;
+        }
+    }
+
+    private boolean isUsernameExists(String username) {
+        dbConnector dbc = new dbConnector();
+
+        try {
+            String query = "SELECT * FROM tbl_user WHERE u_username = '" + username + "'";
+            ResultSet resultSet = dbc.getData(query);
+            return resultSet.next();
+        } catch (SQLException ex) {
+            System.out.println(ex);
+            return false;
+        }
+    }
+       
      public static String email, usname;
 
     public boolean duplicateCheck(){
@@ -169,7 +278,7 @@ public class re_gister extends javax.swing.JFrame {
         jPanel2.setForeground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Candara", 1, 20)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(118, 199, 234));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Return to Login");
@@ -196,6 +305,7 @@ public class re_gister extends javax.swing.JFrame {
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jPanel1.setLayout(null);
 
+        fn.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         fn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fnActionPerformed(evt);
@@ -204,18 +314,19 @@ public class re_gister extends javax.swing.JFrame {
         jPanel1.add(fn);
         fn.setBounds(40, 70, 380, 40);
 
-        first_name.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
+        first_name.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         first_name.setForeground(new java.awt.Color(153, 153, 153));
         first_name.setText("First Name:");
         jPanel1.add(first_name);
-        first_name.setBounds(40, 50, 100, 18);
+        first_name.setBounds(40, 50, 100, 17);
 
-        user_name.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
+        user_name.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         user_name.setForeground(new java.awt.Color(153, 153, 153));
         user_name.setText("Username:");
         jPanel1.add(user_name);
         user_name.setBounds(40, 160, 90, 20);
 
+        us.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         us.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 usActionPerformed(evt);
@@ -224,12 +335,13 @@ public class re_gister extends javax.swing.JFrame {
         jPanel1.add(us);
         us.setBounds(40, 180, 380, 40);
 
-        last_name.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
+        last_name.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         last_name.setForeground(new java.awt.Color(153, 153, 153));
         last_name.setText("Last Name:");
         jPanel1.add(last_name);
         last_name.setBounds(40, 270, 80, 20);
 
+        ln.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         ln.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lnActionPerformed(evt);
@@ -238,6 +350,7 @@ public class re_gister extends javax.swing.JFrame {
         jPanel1.add(ln);
         ln.setBounds(40, 290, 380, 40);
 
+        em.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         em.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 emActionPerformed(evt);
@@ -246,18 +359,19 @@ public class re_gister extends javax.swing.JFrame {
         jPanel1.add(em);
         em.setBounds(450, 70, 390, 40);
 
-        e_mail.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
+        e_mail.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         e_mail.setForeground(new java.awt.Color(153, 153, 153));
         e_mail.setText("Email:");
         jPanel1.add(e_mail);
         e_mail.setBounds(450, 50, 70, 20);
 
-        contact_number.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
+        contact_number.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         contact_number.setForeground(new java.awt.Color(153, 153, 153));
         contact_number.setText("Contact Number:");
         jPanel1.add(contact_number);
-        contact_number.setBounds(460, 160, 120, 20);
+        contact_number.setBounds(450, 160, 120, 20);
 
+        cn.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         cn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cnActionPerformed(evt);
@@ -266,12 +380,13 @@ public class re_gister extends javax.swing.JFrame {
         jPanel1.add(cn);
         cn.setBounds(450, 180, 390, 40);
 
-        pass_word.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
+        pass_word.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         pass_word.setForeground(new java.awt.Color(153, 153, 153));
         pass_word.setText("Password:");
         jPanel1.add(pass_word);
         pass_word.setBounds(450, 270, 90, 20);
 
+        pss.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         pss.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pssActionPerformed(evt);
@@ -289,7 +404,7 @@ public class re_gister extends javax.swing.JFrame {
         });
         registerbutton.setLayout(null);
 
-        jLabel2.setFont(new java.awt.Font("Candara", 0, 20)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Register");
         registerbutton.add(jLabel2);
@@ -307,7 +422,7 @@ public class re_gister extends javax.swing.JFrame {
         jPanel1.add(up);
         up.setBounds(110, 390, 80, 20);
 
-        type.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
+        type.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         type.setForeground(new java.awt.Color(153, 153, 153));
         type.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         type.setText("User Type");
@@ -516,46 +631,7 @@ public class re_gister extends javax.swing.JFrame {
 
     private void registerbuttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerbuttonMouseClicked
    
-     if (fn.getText().isEmpty() || em.getText().isEmpty() || us.getText().isEmpty() || pss.getText().isEmpty() || cn.getText().isEmpty()) {
-    JOptionPane.showMessageDialog(null, "All fields are required");
-} else if (pss.getText().length() < 8) {
-    JOptionPane.showMessageDialog(null, "Password must be at least 8 characters long");
-    pss.setText("");
-} else if (cn.getText().length() != 11) { 
-    JOptionPane.showMessageDialog(null, "Contact number must be 11 digits long");
-} else if (!cn.getText().matches("[0-9]+")) { // Check if contact number contains only numbers
-    JOptionPane.showMessageDialog(null, "Contact number must contain only numbers");
-} else if (!em.getText().endsWith("@gmail.com")) {
-    JOptionPane.showMessageDialog(null, "Email must end with @gmail.com");
-} else if (isEmailExists(em.getText())) { 
-    JOptionPane.showMessageDialog(null, "Email already exists");
-} else {
- dbConnector dbc = new dbConnector();
-    
-try {
-    String password = this.pss.getText();
-   
-    if (!password.matches("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$")) {
-        JOptionPane.showMessageDialog(null, "Password must contain at least 8 characters, including at least one uppercase letter, one lowercase letter, one digit, and one special character.");
-    } else {
-        
-        String pass = passwordHasher.hashPassword(password);
-        dbc.insertData("INSERT INTO tbl_user (u_fname, u_lname, u_email, u_username, u_password, u_type, u_status, u_contact) VALUES ('" + fn.getText() + "','" + ln.getText() + "','" + em.getText() + "','" + us.getText() + "','" + pass + "','" + up.getSelectedItem() + "','Pending', '" + cn.getText() + "') ");
-        JOptionPane.showMessageDialog(null, "You are now Registered!");
-        logIn up = new logIn();
-        up.setVisible(true);
-        this.dispose();
-    }
-} catch(NoSuchAlgorithmException ex) {
-    System.out.println("" + ex);
-}
-}
-    }
-
-    private boolean isEmailExists(String email) {
-    
-    return false; 
-
+  
     }//GEN-LAST:event_registerbuttonMouseClicked
 
     private void lnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lnActionPerformed
