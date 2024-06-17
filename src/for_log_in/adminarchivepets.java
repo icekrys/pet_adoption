@@ -6,8 +6,13 @@
 package for_log_in;
 
 import config.dbConnector;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import javax.swing.JOptionPane;
 import net.proteanit.sql.DbUtils;
 
@@ -25,14 +30,34 @@ public class adminarchivepets extends javax.swing.JFrame {
         displayUser();
             
     }
-     public void displayUser() {
+    
+    public void displayUser() {
         try {
-            String query = "SELECT a_id, a_name, a_age, a_gender, a_breed FROM tbl_archived_pets";
+            String query = "SELECT p_id, p_name, p_age, p_breed, p_gender, p_image, Date_Added FROM tbl_pet WHERE p_status = 'Archive'";
             archivestablepets.setModel(DbUtils.resultSetToTableModel(connector.getData(query)));
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(this, "Error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
+  private void unarchivePet() {
+        int selectedRow = archivestablepets.getSelectedRow();
+        if (selectedRow != -1) {
+            int petId = (int) archivestablepets.getValueAt(selectedRow, 0);
+            String updateQuery = "UPDATE tbl_pet SET p_status = 'Available' WHERE p_id = " + petId;
+            try {
+                if (connector.updateData(updateQuery)) {
+                    JOptionPane.showMessageDialog(this, "Pet unarchived successfully.");
+                    displayUser(); // Refresh the table
+                }
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(this, "Error unarchiving pet: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Please select a pet to unarchive.", "No Selection", JOptionPane.WARNING_MESSAGE);
+        }
+    }
+
+
 
     
     @SuppressWarnings("unchecked")
@@ -45,6 +70,7 @@ public class adminarchivepets extends javax.swing.JFrame {
         archivestablepets = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
+        retrunButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,10 +92,10 @@ public class adminarchivepets extends javax.swing.JFrame {
         archive.setViewportView(archivestablepets);
 
         jPanel4.add(archive);
-        archive.setBounds(16, 17, 920, 570);
+        archive.setBounds(16, 17, 940, 570);
 
         jPanel1.add(jPanel4);
-        jPanel4.setBounds(20, 80, 950, 600);
+        jPanel4.setBounds(10, 80, 970, 600);
 
         jLabel1.setFont(new java.awt.Font("Rockwell", 1, 18)); // NOI18N
         jLabel1.setText("Archive Pets");
@@ -86,6 +112,22 @@ public class adminarchivepets extends javax.swing.JFrame {
         });
         jPanel1.add(jLabel19);
         jLabel19.setBounds(0, 0, 20, 20);
+
+        retrunButton.setBackground(new java.awt.Color(255, 255, 255));
+        retrunButton.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
+        retrunButton.setText("Return");
+        retrunButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                retrunButtonMouseClicked(evt);
+            }
+        });
+        retrunButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                retrunButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(retrunButton);
+        retrunButton.setBounds(880, 50, 100, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -107,6 +149,14 @@ public class adminarchivepets extends javax.swing.JFrame {
      up.setVisible(true);
      this.dispose();
     }//GEN-LAST:event_jLabel19MouseClicked
+
+    private void retrunButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_retrunButtonMouseClicked
+
+    }//GEN-LAST:event_retrunButtonMouseClicked
+
+    private void retrunButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_retrunButtonActionPerformed
+       unarchivePet();
+    }//GEN-LAST:event_retrunButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -153,5 +203,6 @@ public class adminarchivepets extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel4;
+    public javax.swing.JButton retrunButton;
     // End of variables declaration//GEN-END:variables
 }

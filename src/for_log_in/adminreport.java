@@ -8,6 +8,8 @@ package for_log_in;
 import config.dbConnector;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import javax.swing.JOptionPane;
+import javax.swing.table.TableModel;
 import net.proteanit.sql.DbUtils;
 
 /**
@@ -15,29 +17,25 @@ import net.proteanit.sql.DbUtils;
  * @author DERECHO
  */
 public class adminreport extends javax.swing.JFrame {
-
+  private dbConnector connector;
     public adminreport() {
         initComponents();
+         connector = new dbConnector();
         displayUser();
     }
-
-   public void displayUser() {
-    dbConnector connector = new dbConnector();
-    try {
-        String query = "SELECT "
-                     + "COUNT(*) AS Total_Customers, "
-                     + "(SELECT COUNT(*) FROM tbl_pet) AS Total_Pets, "
-                     + "(SELECT COUNT(*) FROM tbl_adopted) AS Total_Adopted, "
-                     + "(SELECT COUNT(*) FROM tbl_returned) AS Total_Returned "
-                     + "FROM tbl_customers";
-        try (ResultSet resultSet = connector.getData(query)) {
-            reportstable.setModel(DbUtils.resultSetToTableModel(resultSet));
+  public void displayUser(){
+        dbConnector connector = new dbConnector();
+        try{            
+            try (ResultSet resultSet = connector.getData("SELECT u_id, u_fname, u_lname FROM tbl_user")) {
+                reportstable.setModel(DbUtils.resultSetToTableModel(resultSet));
+                
+            }
+            
+        }catch(SQLException ex){
+            System.out.println("Errors: "+ex.getMessage());
+            
         }
-    } catch (SQLException ex) {
-        System.out.println("Errors: " + ex.getMessage());
     }
-}
-
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -48,6 +46,7 @@ public class adminreport extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         reportstable = new javax.swing.JTable();
         jLabel19 = new javax.swing.JLabel();
+        print = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -90,6 +89,18 @@ public class adminreport extends javax.swing.JFrame {
         jPanel1.add(jLabel19);
         jLabel19.setBounds(0, 0, 20, 20);
 
+        print.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
+        print.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        print.setText("Print");
+        print.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        print.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                printMouseClicked(evt);
+            }
+        });
+        jPanel1.add(print);
+        print.setBounds(920, 30, 60, 20);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -110,6 +121,34 @@ public class adminreport extends javax.swing.JFrame {
         up.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel19MouseClicked
+
+    private void printMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_printMouseClicked
+        int rowindex = reportstable.getSelectedRow();
+        if(rowindex < 0)
+        {
+            JOptionPane.showMessageDialog(null,"Please Select An Item");
+        }else{
+            try{
+                dbConnector dbc = new dbConnector();
+                TableModel model = reportstable.getModel();
+                ResultSet rs = dbc.getData("Select * FROM tbl_user WHERE u_id = '"+model.getValueAt(rowindex, 0)+"'");
+                if(rs.next()){
+                    individualPrinting pf = new individualPrinting();
+                    pf .id.setText(""+model.getValueAt(rowindex, 0));
+                    pf .fn.setText(""+model.getValueAt(rowindex, 1));
+                    pf .ln.setText(""+model.getValueAt(rowindex, 2));
+                    pf .em.setText(model.getValueAt(rowindex, 3).toString());
+                    pf .us.setText(""+model.getValueAt(rowindex, 4));
+                    pf .up.setText(""+model.getValueAt(rowindex, 5));
+                    pf .usta.setText(model.getValueAt(rowindex, 6).toString());
+                    pf.setVisible(true);
+                    this.dispose();
+                }
+            }catch(SQLException ex){
+                System.out.println(""+ex);
+            }
+        }
+    }//GEN-LAST:event_printMouseClicked
 
     /**
      * @param args the command line arguments
@@ -152,6 +191,7 @@ public class adminreport extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel print;
     private javax.swing.JTable reportstable;
     // End of variables declaration//GEN-END:variables
 }

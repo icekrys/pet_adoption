@@ -146,9 +146,9 @@ public class addpet extends javax.swing.JFrame {
         jPanel5.setBounds(30, 80, 530, 90);
 
         e_mail4.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
-        e_mail4.setText("Date of Birth:");
+        e_mail4.setText("Date Arrived on the Adoption center:");
         jPanel1.add(e_mail4);
-        e_mail4.setBounds(30, 500, 110, 20);
+        e_mail4.setBounds(30, 500, 230, 20);
 
         jComboBox5.setFont(new java.awt.Font("Candara", 0, 18)); // NOI18N
         jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));

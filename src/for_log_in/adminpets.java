@@ -6,6 +6,9 @@
 package for_log_in;
 
 import config.dbConnector;
+import java.sql.ResultSet;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import javax.swing.JOptionPane;
 import net.proteanit.sql.DbUtils;
 
@@ -22,14 +25,69 @@ public class adminpets extends javax.swing.JFrame {
           connector = new dbConnector();
         displayUser();
     }
-  private void displayUser() {
+ 
+    private void displayUser() {
         try {
-            String query = "SELECT p_id, p_name, p_age, p_breed, p_gender FROM tbl_pet";
+            String query = "SELECT p_id, p_name, p_age, p_breed, p_gender, p_image, Date_Added FROM tbl_pet WHERE p_status NOT IN ('Archive')";
             pettable.setModel(DbUtils.resultSetToTableModel(connector.getData(query)));
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(this, "Error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
+   private void archivePet() {
+        int selectedRow = pettable.getSelectedRow();
+        if (selectedRow != -1) {
+            int petId = (int) pettable.getValueAt(selectedRow, 0);
+
+        
+            String checkQuery = "SELECT COUNT(*) FROM tbl_pet WHERE p_id = " + petId;
+            int adoptionCount = 0;
+            try {
+                ResultSet rs = connector.getData(checkQuery);
+                if (rs.next()) {
+                    adoptionCount = rs.getInt(1);
+                }
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(this, "Error checking adoption status: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+
+            LocalDateTime currentDateTime = LocalDateTime.now();
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("(dd-MM-yyyy) - (HH:mm)");
+            String formattedDateTime = currentDateTime.format(formatter);
+
+            if (adoptionCount > 0) {
+                String updateQuery = "UPDATE tbl_pet SET Date_Added = '" + formattedDateTime + "', p_status = 'Archive' WHERE p_id = " + petId;
+                try {
+                    if (connector.updateData(updateQuery)) {
+                        JOptionPane.showMessageDialog(this, "Pet updated successfully. Current date and time: " + formattedDateTime);
+                        displayUser(); // Refresh the table
+                        return;
+                    }
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(this, "Error updating adoption status: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            } else {
+                String archiveQuery = "INSERT INTO tbl_pet (p_id, p_name, p_age, p_breed, p_gender, p_image, Date_Added, p_status) "
+                        + "SELECT p_id, p_name, p_age, p_breed, p_gender, '', '" + formattedDateTime + "', 'Archive' "
+                        + "FROM tbl_pet WHERE p_id = " + petId;
+                String deleteQuery = "DELETE FROM tbl_pet WHERE p_id = " + petId;
+
+                try {
+                    if (connector.archiveData(archiveQuery) && connector.deleteData(deleteQuery)) {
+                        JOptionPane.showMessageDialog(this, "Pet archived successfully. Current date and time copied to clipboard: " + formattedDateTime);
+                        displayUser(); // Refresh the table
+                        return;
+                    }
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(this, "Error archiving pet: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Please select a pet to archive.", "No Selection", JOptionPane.WARNING_MESSAGE);
+        }
+    }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -152,7 +210,7 @@ public class adminpets extends javax.swing.JFrame {
     }//GEN-LAST:event_archivebutton1MouseClicked
 
     private void archivebutton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_archivebutton1ActionPerformed
-        // TODO add your handling code here:
+       archivePet();
     }//GEN-LAST:event_archivebutton1ActionPerformed
 
     /**

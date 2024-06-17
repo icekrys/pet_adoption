@@ -71,7 +71,7 @@ public class individualPrinting extends javax.swing.JFrame {
         id.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
         id.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         page.add(id);
-        id.setBounds(410, 140, 220, 20);
+        id.setBounds(210, 140, 220, 20);
 
         jLabel3.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -83,71 +83,71 @@ public class individualPrinting extends javax.swing.JFrame {
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("User ID:");
         page.add(jLabel4);
-        jLabel4.setBounds(280, 140, 50, 20);
+        jLabel4.setBounds(80, 140, 50, 20);
 
         fn.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
         fn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         page.add(fn);
-        fn.setBounds(410, 200, 220, 20);
+        fn.setBounds(210, 200, 220, 20);
 
         jLabel5.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("First name:");
         page.add(jLabel5);
-        jLabel5.setBounds(280, 200, 67, 20);
+        jLabel5.setBounds(80, 200, 67, 20);
 
         ln.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
         ln.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         page.add(ln);
-        ln.setBounds(410, 250, 220, 20);
+        ln.setBounds(210, 250, 220, 20);
 
         jLabel6.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Last name:");
         page.add(jLabel6);
-        jLabel6.setBounds(280, 250, 70, 20);
+        jLabel6.setBounds(80, 250, 70, 20);
 
         em.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
         em.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         page.add(em);
-        em.setBounds(410, 310, 220, 20);
+        em.setBounds(210, 310, 220, 20);
 
         jLabel7.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
         jLabel7.setText("Email:");
         page.add(jLabel7);
-        jLabel7.setBounds(280, 310, 50, 20);
+        jLabel7.setBounds(80, 310, 50, 20);
 
         usta.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
         usta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         page.add(usta);
-        usta.setBounds(410, 420, 220, 20);
+        usta.setBounds(210, 420, 220, 20);
 
         jLabel8.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
         jLabel8.setText("User name:");
         page.add(jLabel8);
-        jLabel8.setBounds(280, 360, 70, 20);
+        jLabel8.setBounds(80, 360, 70, 20);
 
         up.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
         up.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         page.add(up);
-        up.setBounds(410, 470, 220, 20);
+        up.setBounds(210, 470, 220, 20);
 
         jLabel9.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Account type:");
         page.add(jLabel9);
-        jLabel9.setBounds(280, 470, 90, 20);
+        jLabel9.setBounds(80, 470, 90, 20);
 
         jLabel10.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("Account status:");
         page.add(jLabel10);
-        jLabel10.setBounds(280, 420, 100, 20);
+        jLabel10.setBounds(80, 420, 100, 20);
 
         us.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
         us.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         page.add(us);
-        us.setBounds(410, 360, 220, 20);
+        us.setBounds(210, 360, 220, 20);
 
         jPanel1.add(page);
         page.setBounds(10, 40, 960, 640);

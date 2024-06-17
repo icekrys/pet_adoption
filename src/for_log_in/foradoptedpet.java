@@ -6,6 +6,11 @@
 package for_log_in;
 
 import config.dbConnector;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import javax.swing.JOptionPane;
 import net.proteanit.sql.DbUtils;
 
@@ -26,13 +31,14 @@ public class foradoptedpet extends javax.swing.JFrame {
 
      private void displayUser() {
         try {
-            String query = "SELECT pa_id, a_name, a_age, a_breed, a_gender, a_image, Date_Adopted FROM tbl_adopted";
+            String query = "SELECT a_id, a_name, a_age, a_breed, a_gender, Date_Adopted FROM tbl_adopted";
             adoptedTable.setModel(DbUtils.resultSetToTableModel(connector.getData(query)));
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(this, "Error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
   
+      
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -43,6 +49,7 @@ public class foradoptedpet extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         adoptedTable = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
+        retrunButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -85,6 +92,22 @@ public class foradoptedpet extends javax.swing.JFrame {
         jPanel1.add(jLabel1);
         jLabel1.setBounds(10, 32, 80, 40);
 
+        retrunButton.setBackground(new java.awt.Color(255, 255, 255));
+        retrunButton.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
+        retrunButton.setText("Return");
+        retrunButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                retrunButtonMouseClicked(evt);
+            }
+        });
+        retrunButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                retrunButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(retrunButton);
+        retrunButton.setBounds(880, 40, 100, 30);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -105,6 +128,43 @@ public class foradoptedpet extends javax.swing.JFrame {
         up.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel19MouseClicked
+
+    private void retrunButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_retrunButtonMouseClicked
+
+    }//GEN-LAST:event_retrunButtonMouseClicked
+
+    private void retrunButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_retrunButtonActionPerformed
+         int selectedRow = adoptedTable.getSelectedRow();
+    if (selectedRow != -1) {
+        int petId = (int) adoptedTable.getValueAt(selectedRow, 0);
+        String archiveQuery = "INSERT INTO tbl_pet SELECT * FROM tbl_adopted WHERE a_id = " + petId;
+        String deleteQuery = "DELETE FROM tbl_adopted WHERE a_id = " + petId;
+        try {
+            if (connector.archiveData(archiveQuery) && connector.deleteData(deleteQuery)) {
+                // Get the current date and time
+                LocalDateTime currentDateTime = LocalDateTime.now();
+                // Define the format for the date and time
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+                // Format the current date and time
+                String formattedDateTime = currentDateTime.format(formatter);
+                // Copy the formatted date and time to the clipboard
+                StringSelection stringSelection = new StringSelection(formattedDateTime);
+                Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+                clipboard.setContents(stringSelection, null);
+
+                // Display a message to the user
+                JOptionPane.showMessageDialog(this, "Pet returned successfully.\nCurrent Date and Time copied to clipboard: " + formattedDateTime);
+                
+                // Refresh the table
+                displayUser(); 
+            }
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(this, "Error returning Pet: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    } else {
+        JOptionPane.showMessageDialog(this, "Please select a pet to return.", "No Selection", JOptionPane.WARNING_MESSAGE);
+    }
+    }//GEN-LAST:event_retrunButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -148,5 +208,6 @@ public class foradoptedpet extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JButton retrunButton;
     // End of variables declaration//GEN-END:variables
 }

@@ -30,7 +30,7 @@ public class admincustomers extends javax.swing.JFrame {
 
    private void displayUser() {
         try {
-            String query = "SELECT c_id, c_name, c_age, c_gender, c_contact, c_address, c_email FROM tbl_customers";
+            String query = "SELECT u_id, u_fname, u_lname, u_email, u_username, u_password, u_type, u_status, u_contact FROM tbl_user";
             customersTable.setModel(DbUtils.resultSetToTableModel(connector.getData(query)));
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(this, "Error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);

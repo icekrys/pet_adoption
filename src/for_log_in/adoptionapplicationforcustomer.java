@@ -210,7 +210,7 @@ public class adoptionapplicationforcustomer extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "All fields are required");
         } else {
             try {
-                dbc.insertData("INSERT INTO tbl_customers(c_name, c_age, c_gender, c_contact, c_address, c_email) VALUES('" + name + "', '" + age + "', '" + gender + "', '" + contact + "', '" + address + "', '" + email + "')");
+                dbc.insertData("INSERT INTO tbl_user(c_name, c_age, c_gender, c_contact, c_address, c_email) VALUES('" + name + "', '" + age + "', '" + gender + "', '" + contact + "', '" + address + "', '" + email + "')");
                 JOptionPane.showMessageDialog(null, "Successfully Saved");
                 
                 // After saving, update the admincustomers table

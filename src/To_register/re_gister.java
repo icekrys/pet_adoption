@@ -407,6 +407,11 @@ public class re_gister extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Register");
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
         registerbutton.add(jLabel2);
         jLabel2.setBounds(40, 0, 130, 30);
 
@@ -630,13 +635,119 @@ public class re_gister extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel1MouseClicked
 
     private void registerbuttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerbuttonMouseClicked
-   
-  
+       String firstName = fn.getText();
+        String lastName = ln.getText();
+        String email = em.getText();
+        String username = us.getText();
+        String password = new String(pss.getPassword());
+        String contactNumber = cn.getText();
+
+        // Basic validation
+        if (firstName.isEmpty() || lastName.isEmpty() || email.isEmpty() || username.isEmpty() || password.isEmpty() || contactNumber.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "All fields are required");
+            return;
+        }
+
+        if (password.length() < 8) {
+            JOptionPane.showMessageDialog(null, "Password must be at least 8 characters long");
+            pss.setText("");
+            return;
+        }
+
+        if (contactNumber.length() != 11 || !contactNumber.matches("[0-9]+")) {
+            JOptionPane.showMessageDialog(null, "Contact number must be 11 digits long and contain only numbers");
+            return;
+        }
+
+        if (!email.endsWith("@gmail.com")) {
+            JOptionPane.showMessageDialog(null, "Email must end with @gmail.com");
+            return;
+        }
+
+        // Check for duplicate email or username
+        if (isEmailExists(email)) {
+            JOptionPane.showMessageDialog(null, "Email already exists");
+            return;
+        }
+
+        if (isUsernameExists(username)) {
+            JOptionPane.showMessageDialog(null, "Username already exists");
+            return;
+        }
+
+        // Hash the password before saving
+        try {
+            String hashedPassword = passwordHasher.hashPassword(password);
+            dbConnector dbc = new dbConnector();
+            dbc.insertData("INSERT INTO tbl_user (u_fname, u_lname, u_email, u_username, u_password, u_type, u_status, u_contact) VALUES  ('" + fn.getText() + "','" + ln.getText() + "','" + em.getText() + "','" + us.getText() + "','" + hashedPassword + "','" + up.getSelectedItem() + "','Pending', '" + cn.getText() + "') ");
+            JOptionPane.showMessageDialog(null, "You are now Registered!");
+            logIn login = new logIn();
+            login.setVisible(true);
+            this.dispose();
+        } catch (NoSuchAlgorithmException ex) {
+            JOptionPane.showMessageDialog(null, "Error occurred while registering. Please try again later.");
+            System.out.println(ex);
+        }
     }//GEN-LAST:event_registerbuttonMouseClicked
 
     private void lnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_lnActionPerformed
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        String firstName = fn.getText();
+        String lastName = ln.getText();
+        String email = em.getText();
+        String username = us.getText();
+        String password = new String(pss.getPassword());
+        String contactNumber = cn.getText();
+
+        // Basic validation
+        if (firstName.isEmpty() || lastName.isEmpty() || email.isEmpty() || username.isEmpty() || password.isEmpty() || contactNumber.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "All fields are required");
+            return;
+        }
+
+        if (password.length() < 8) {
+            JOptionPane.showMessageDialog(null, "Password must be at least 8 characters long");
+            pss.setText("");
+            return;
+        }
+
+        if (contactNumber.length() != 11 || !contactNumber.matches("[0-9]+")) {
+            JOptionPane.showMessageDialog(null, "Contact number must be 11 digits long and contain only numbers");
+            return;
+        }
+
+        if (!email.endsWith("@gmail.com")) {
+            JOptionPane.showMessageDialog(null, "Email must end with @gmail.com");
+            return;
+        }
+
+        // Check for duplicate email or username
+        if (isEmailExists(email)) {
+            JOptionPane.showMessageDialog(null, "Email already exists");
+            return;
+        }
+
+        if (isUsernameExists(username)) {
+            JOptionPane.showMessageDialog(null, "Username already exists");
+            return;
+        }
+
+        try {
+            String hashedPassword = passwordHasher.hashPassword(password);
+            dbConnector dbc = new dbConnector();
+            dbc.insertData("INSERT INTO tbl_user (u_fname, u_lname, u_email, u_username, u_password, u_type, u_status, u_contact) VALUES ('" + fn.getText() + "','" + ln.getText() + "','" + em.getText() + "','" + us.getText() + "','" + hashedPassword + "','" + up.getSelectedItem() + "','Pending', '" + cn.getText() + "') ");
+            JOptionPane.showMessageDialog(null, "You are now Registered!");
+            logIn login = new logIn();
+            login.setVisible(true);
+            this.dispose();
+        } catch (NoSuchAlgorithmException ex) {
+            JOptionPane.showMessageDialog(null, "Error occurred while registering. Please try again later.");
+            System.out.println(ex);
+        }
+    }//GEN-LAST:event_jLabel2MouseClicked
 
     /**
      * @param args the command line arguments

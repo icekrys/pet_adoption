@@ -24,7 +24,7 @@ public class returnedpet extends javax.swing.JFrame {
     }
   private void displayUser() {
         try {
-            String query = "SELECT p_id, p_name, p_age, p_breed, p_gender FROM tbl_returned";
+            String query = "SELECT returned_id, returned_name, returned_age, returned_breed, returned_gender, returned_image, returned_date FROM tbl_pet";
             returnedtable.setModel(DbUtils.resultSetToTableModel(connector.getData(query)));
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(this, "Error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);

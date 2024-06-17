@@ -9,7 +9,13 @@ import Pets_Information.Pet2;
 import Pets_Information.Pet3;
 import Pets_Information.Pet4;
 import config.dbConnector;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
+import java.sql.ResultSet;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import javax.swing.JOptionPane;
 import net.proteanit.sql.DbUtils;
@@ -32,11 +38,67 @@ public class pets extends javax.swing.JFrame {
 
      private void displayUser() {
         try {
-            String query = "SELECT p_id, p_name, p_age, p_breed, p_gender, p_image, Date_Adopted FROM tbl_pet";
+            String query = "SELECT p_id, p_name, p_age, p_breed, p_gender, Date_Adopted FROM tbl_pet ";
             selectpets.setModel(DbUtils.resultSetToTableModel(connector.getData(query)));
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(this, "Error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
+    }
+     private void archivePet() {
+      int selectedRow = selectpets.getSelectedRow();
+    if (selectedRow != -1) {
+        int petId = (int) selectpets.getValueAt(selectedRow, 0);
+
+        // Check if the pet has been previously adopted
+        String checkQuery = "SELECT COUNT(*) FROM tbl_adopted WHERE a_id = " + petId;
+        int adoptionCount = 0;
+        try {
+            ResultSet rs = connector.getData(checkQuery);
+            if (rs.next()) {
+                adoptionCount = rs.getInt(1);
+            }
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(this, "Error checking adoption status: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        // Get the current date and time
+        LocalDateTime currentDateTime = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("(dd-MM-yyyy) - (HH:mm)");
+        String formattedDateTime = currentDateTime.format(formatter);
+
+        if (adoptionCount > 0) {
+            // If the pet has been adopted before, update the Date_Adopted field
+            String updateQuery = "UPDATE tbl_adopted SET Date_Adopted = '" + formattedDateTime + "' WHERE a_id = " + petId;
+            try {
+                if (connector.updateData(updateQuery)) {
+                    JOptionPane.showMessageDialog(this, "Pet updated successfully. Current date and time: " + formattedDateTime);
+                    displayUser(); // Refresh the table
+                    return;
+                }
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(this, "Error updating adoption status: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } else {
+            // If the pet has not been adopted before, insert a new record
+            String archiveQuery = "INSERT INTO tbl_adopted (a_id, a_name, a_age, a_breed, a_gender, a_image, Date_Adopted) "
+                    + "SELECT p_id, p_name, p_age, p_breed, p_gender, '', '" + formattedDateTime + "' "
+                    + "FROM tbl_pet WHERE p_id = " + petId;
+            String deleteQuery = "DELETE FROM tbl_pet WHERE p_id = " + petId;
+
+            try {
+                if (connector.archiveData(archiveQuery) && connector.deleteData(deleteQuery)) {
+                    JOptionPane.showMessageDialog(this, "Pet added successfully. Current date and time copied to clipboard: " + formattedDateTime);
+                    displayUser(); // Refresh the table
+                    return;
+                }
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(this, "Error adding pet: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    } else {
+        JOptionPane.showMessageDialog(this, "Please select a pet to add.", "No Selection", JOptionPane.WARNING_MESSAGE);
+    }
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -170,23 +232,7 @@ public class pets extends javax.swing.JFrame {
     }//GEN-LAST:event_archivebuttonMouseClicked
 
     private void archivebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_archivebuttonActionPerformed
-   int selectedRow = selectpets.getSelectedRow();
-        if (selectedRow != -1) {
-            int petId = (int) selectpets.getValueAt(selectedRow, 0);
-            String archiveQuery = "INSERT INTO tbl_adopted SELECT * FROM tbl_pet WHERE p_id = " + petId;
-            String deleteQuery = "DELETE FROM tbl_pet WHERE p_id = " + petId;
-            try {
-                if (connector.archiveData(archiveQuery) && connector.deleteData(deleteQuery)) {
-                    JOptionPane.showMessageDialog(this, "Pet Added successfully.");
-                    displayUser(); // Refresh the table
-                    return;
-                }
-            } catch (Exception ex) {
-                JOptionPane.showMessageDialog(this, "Error Adding Pet: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-            }
-        } else {
-            JOptionPane.showMessageDialog(this, "Please select a pet to add.", "No Selection", JOptionPane.WARNING_MESSAGE);
-        }
+   archivePet();
     }//GEN-LAST:event_archivebuttonActionPerformed
 
     /**
